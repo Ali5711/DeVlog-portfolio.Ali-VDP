@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fashion Police DevLog</title>
+<meta name="description" content="DevLog van Fashion Police: een slimme spiegel die je outfit beoordeelt. Project van Ali Addi voor Dark Tech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=JetBrains+Mono:wght@400;700&family=Public+Sans:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Hoofdmenu">
+  <a class="name" href="index.html">Ali Addi</a>
+  <ul>
+    <li><a href="index.html">Projecten</a></li>
+    <li><a href="fashion-police.html" aria-current="page">Fashion Police</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div>
+    <h1 data-text="Fashion Police">Fashion Police</h1>
+    <p class="lead" style="margin-top:20px">Een slimme spiegel die je outfit beoordeelt, en je met complimenten en kritiek verleidt om steeds meer van jezelf te laten zien.</p>
+    <dl class="dossier">
+      <dt>Mijn rol</dt><dd>Creative technologist</dd>
+      <dt>Sprint</dt><dd>1 van 3, afgerond</dd>
+    </dl>
+  </div>
+  <figure class="mirror" style="margin:0">
+    <video src="media/eindversie.mp4" poster="media/eindversie-scan.jpg" autoplay muted loop playsinline controls aria-label="Schermopname van versie 2 van Fashion Police"></video>
+  </figure>
+</header>
+
+<!-- ============ SPRINTS ============ -->
+<nav class="sprints" aria-label="Sprints">
+  <a href="#sprint-1" aria-current="true">Sprint 1<small>afgerond</small></a>
+  <a href="#sprint-2">Sprint 2<small>komt nog</small></a>
+  <a href="#sprint-3">Sprint 3<small>komt nog</small></a>
+</nav>
+
+<!-- ============ SPRINT 1 ============ -->
+<div class="sprint-head" id="sprint-1">
+  <p class="sprint-label">Sprint 1</p>
+  <p class="muted">Van de eerste afspraken met de opdrachtgever tot versie 2 en de sprint review.</p>
+</div>
+
+<!-- ============ COMPETENTIES ============ -->
+<section class="section" id="competenties">
+  <h2>Wat ik laat zien als creative technologist</h2>
+  <div class="prose">
+    <p>Een creative technologist combineert creativiteit en technologie om interactieve, experimentele digitale ervaringen te bouwen. Hieronder zie je per competentie uit de <a href="https://boksa.hbo-ict-hva.nl/profiles/creative-technologist/" target="_blank" rel="noopener">BOKSA</a> wat ik heb gedaan.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Competentie</th><th>Wat ik deed</th></tr></thead>
+      <tbody>
+        <tr><td>Persoonlijk leiderschap</td><td>Zelf contact gelegd met de opdrachtgever, feedback gevraagd en verwerkt, kritisch gereflecteerd op mijn eigen prototype en deze portfolio bijgehouden.</td></tr>
+        <tr><td>Analyseren en adviseren</td><td>De opdracht vastgelegd in een debrief, literatuuronderzoek en een stakeholderanalyse gedaan naar surveillance, en de demo van de docent kritisch bekeken.</td></tr>
+        <tr><td>Ontwerpen en realiseren</td><td>Prototypes gebouwd, de interactie ontworpen als een verhaal, ethiek en privacy meegenomen in het ontwerp, AI-modellen gekoppeld in de code, de app responsive gemaakt en getest met een gebruiker.</td></tr>
+        <tr><td>Managen en samenwerken</td><td>Stap voor stap gewerkt en steeds verbeterd, meetings georganiseerd, het samenwerkingscontract opgesteld, het team ondersteund en het proces gedocumenteerd.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 1. AFSPRAKEN ============ -->
+<section class="section" id="afspraken">
+  <h2>1. Afspraken met de opdrachtgever</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Debrief opstellen</span><span>Persoonlijk leiderschap</span></p>
+  <div class="prose">
+    <p>Dark Tech gaat over technologie die er onschuldig uitziet, maar iets van je wil. Onze opdrachtgever wilde een spiegel die een oordeel velt over je outfit. Het donkere zit niet in het oordeel zelf, maar in wat het met je doet: na een irritante opmerking wil je jezelf verdedigen, nog een foto maken en nog iets vertellen. Precies die reacties leveren de data op.</p>
+    <p>Ik nam het eerste contact op met de opdrachtgever en plande de kennismaking. Na het gesprek zetten we alles in een debrief, en die stuurde ik terug ter controle. Zo wisten we zeker dat we de opdracht goed begrepen.</p>
+  </div>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/mail-kennismaking.png" alt="Mail aan Yuri Westplat om een kennismakingsgesprek te plannen" loading="lazy">
+      <figcaption>Mijn mail om de kennismaking te plannen. Ik stelde een tijd voor en bood aan zelf een ruimte te regelen.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/mail-debrief.png" alt="Mail met de debrief aan Yuri Westplat, met het team in de CC" loading="lazy">
+      <figcaption>De debrief naar de opdrachtgever, met de vraag of we iets gemist hadden.</figcaption>
+      <a class="doc" href="media/docs/debrief-fashion-police.pdf" target="_blank" rel="noopener"><span>PDF</span>Open de debrief</a>
+    </figure>
+  </div>
+  <div class="prose">
+    <h3>Wat we afspraken</h3>
+    <ul>
+      <li>Gezichten worden nooit opgeslagen en nooit getoond (AVG).</li>
+      <li>De interactie moet direct te snappen zijn, zonder uitleg vooraf.</li>
+      <li>Aan het einde toont de spiegel statistieken over wat hij heeft verzameld.</li>
+      <li>Elke sprint review is een demo van iets dat werkt, zonder PowerPoint.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 2. AAN DE SLAG ALS TEAM ============ -->
+<section class="section" id="team">
+  <h2>2. Aan de slag als team</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Managen en samenwerken</span><span>Stakeholderanalyse</span><span>Literatuuronderzoek</span></p>
+  <div class="prose">
+    <p>Met die afspraken op papier gingen we als team van start. Ik had meerdere rollen. Ik was de <strong>developer</strong> die de app werkend kreeg en uitbreidde met creatieve ideeën. Ik was het <strong>aanspreekpunt</strong> voor de opdrachtgever, en ik zorgde ervoor dat iedereen zich goed voelde binnen het team.</p>
+    <p>Eerst maakten we duidelijke afspraken met elkaar. Daarna verdeelden we het onderzoek, zodat iedereen een eigen onderwerp had. Al aan het begin van de sprint leerde ik hoe belangrijk het is om rustig te blijven als er iets misgaat.</p>
+  </div>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/wa-samenwerkingscontract.png" alt="WhatsApp-bericht waarin ik het samenwerkingscontract deel met de groep" loading="lazy">
+      <figcaption>Ik stelde het samenwerkingscontract op uit de punten van de les, en vroeg eerst aan de groep of er iets ontbrak.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/wa-dark-values.png" alt="WhatsApp-groep waarin ik de groepsopdracht deel en iedereen een eigen dark value kiest" loading="lazy">
+      <figcaption>Ik deelde de groepsopdracht en verdeelde de dark values, zodat niemand hetzelfde onderwerp had. Ik koos zelf surveillance. In de groepsopdracht brachten we per stakeholder in kaart welke dark values ons project raakt.</figcaption>
+      <a class="doc" href="media/docs/groepsopdracht-dark-values.pdf" target="_blank" rel="noopener"><span>PDF</span>Open de groepsopdracht dark values</a>
+      <a class="doc" href="media/docs/onderzoek-surveillance.pdf" target="_blank" rel="noopener"><span>PDF</span>Open mijn onderzoek naar surveillance</a>
+    </figure>
+    <figure>
+      <img class="frame" src="media/wa-rustig-blijven.png" alt="WhatsApp-groep waarin ik na een fout zeg dat we een team zijn en het samen beter doen" loading="lazy">
+      <figcaption>Aan het begin van de sprint ging er iets mis bij een afspraak. Ik bleef rustig, wees niemand aan en stond boven de situatie. Op een vervelende reactie ging ik niet in. In plaats daarvan bedacht ik een betere oplossing: ik besprak het met mijn coach. Zo liet ik het niet escaleren en loste ik het goed op.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 3. VERSIE 1 ============ -->
+<section class="section" id="versie-1">
+  <h2>3. Versie 1: begonnen met bouwen</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Inspiratie zoeken</span><span>Prototypen</span><span>Interactie ontwerpen</span><span>Rekening houden met ethiek</span></p>
+  <div class="prose">
+    <p>Voordat ik begon met bouwen, liet onze docent een demo zien als inspiratie. Daarin houd je een hand voor je gezicht, en een cirkel laat zien wat er vervaagd wordt. Het idee klopte, maar het werkte alleen als je precies wist wat je moest doen. Een voorbijganger houdt niet uit zichzelf een hand voor zijn gezicht.</p>
+    <p>Daarom bouwde ik mijn eigen versie 1. Ik zette het project op mijn laptop en kreeg de app werkend. In mijn versie ligt de privacy bij het ontwerp, niet bij de gebruiker. Je hoofd moet boven de groene lijn blijven, anders gaat de scan niet door. Zo komt je gezicht nooit in beeld, en de spiegel ziet alleen je outfit. Ik maakte hem ook mooier, met duidelijke stappen: &ldquo;Hoofd op de juiste plek&rdquo;, &ldquo;Blijf zo staan&hellip;&rdquo;, &ldquo;Even kijken&hellip;&rdquo;.</p>
+  </div>
+  <div class="pair">
+    <figure>
+      <span class="tag before">Inspiratie: demo van de docent</span>
+      <video class="frame" src="media/docent-versie.mp4" poster="media/docent-versie.jpg" controls muted playsinline preload="none" aria-label="Demo van de docent: een cirkel en de tekst Cover your face"></video>
+      <figcaption>Je moet zelf je gezicht bedekken. Doe je dat niet, dan sta je volledig in beeld.</figcaption>
+    </figure>
+    <figure>
+      <span class="tag after">Mijn versie 1</span>
+      <video class="frame" src="media/mijn-versie.mp4" poster="media/mijn-versie.jpg" controls muted playsinline preload="none" aria-label="Mijn versie 1: een groene lijn waar je hoofd boven moet blijven"></video>
+      <figcaption>Je hoofd valt boven de groene lijn en komt dus niet in beeld.</figcaption>
+    </figure>
+  </div>
+  <div class="prose">
+    <p>Daarna maakte ik er een verhaal van: de spiegel geeft niet alleen een oordeel, maar reageert ook op wat er eerder gebeurde.</p>
+    <h3>Wat ik uitprobeerde</h3>
+    <ul>
+      <li><strong>Positief en negatief om en om.</strong> Na testen werkte dat minder spannend. Ik koos voor positief bij foto 1 en 3 en kritiek bij de rest: na een compliment wil je er meer, na kritiek wil je jezelf bewijzen. De complimenten zijn er om mensen aan te trekken. Als de spiegel alleen kritiek geeft, haken mensen af en doen ze niet meer mee.</li>
+      <li><strong>Losse foto's of een verhaal.</strong> Losse oordelen voelden willekeurig. Nu reageert de spiegel op je vorige foto, en houdt hij een dossier bij met een ✓ of ✗ per foto.</li>
+      <li><strong>Een Instagram-twist.</strong> Bij foto 3 verschijnt er een QR-code op het scherm. Die scan je met je telefoon, en daar vul je je Instagram in. Daarna doet de spiegel alsof hij je profiel bekijkt. Doordat je zelf iets moet doen met je telefoon, heb je echt interactie met de spiegel en blijf je als gebruiker geïnteresseerd in wat er gaat gebeuren.</li>
+    </ul>
+    <p>De app telt per bezoeker hoeveel foto's er gemaakt zijn. De kritiek gaat bewust alleen over kleding en nooit over iemands lichaam. Er staan vreemden voor de spiegel, en je wilt dat ze lachen, niet dat ze gekwetst weglopen.</p>
+  </div>
+<pre><code>scan_count = session.get('scan_count', 0) + 1
+session['scan_count'] = scan_count
+is_positive = scan_count in POSITIVE_SCANS</code></pre>
+  <figure>
+    <img class="frame" src="media/twist.gif" alt="Animatie: na het invullen van een Instagram-naam zegt de spiegel 'Even rondkijken' en daarna 'Ik heb even rondgekeken... en ik neem mijn woorden terug'" loading="lazy" style="max-width:560px">
+    <figcaption>De Instagram-twist bij foto 3. Het laat zien hoe makkelijk mensen extra gegevens weggeven.</figcaption>
+  </figure>
+  <div class="prose">
+    <p>De Instagram-naam staat alleen in het geheugen, nooit in een bestand, en wordt gewist zodra het scherm hem heeft getoond.</p>
+  </div>
+<pre><code>if entry["handle"]:
+    <span class="c"># Direct wissen: we bewaren de naam niet.</span>
+    handle = INSTA_TOKENS.pop(token)["handle"]
+    session['insta_done'] = True
+    return jsonify({'done': True, 'handle': handle})</code></pre>
+</section>
+
+<!-- ============ 4. FEEDBACK ============ -->
+<section class="section" id="feedback">
+  <h2>4. Feedback gevraagd</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Feedback vragen en gebruiken</span><span>Presenteren aan de opdrachtgever</span><span>Proces documenteren</span></p>
+  <div class="prose">
+    <p>Ik wilde niet een hele sprint de verkeerde kant op werken. Daarom organiseerde ik een feedbackmoment met de opdrachtgever en Bas, en maakte ik de notulen. Die notulen stuurde ik daarna naar het team, zodat mijn groepsleden precies wisten wat er gedaan moest worden.</p>
+  </div>
+  <figure>
+    <img class="frame" src="media/teams-meeting.png" alt="Teams-bericht aan Yuri en Bas met de vraag om donderdagochtend een meeting te houden" loading="lazy" style="max-width:720px">
+    <figcaption>Ik vroeg Yuri en Bas om een meeting om te checken of we op de goede weg zaten. Dat bleek zo te zijn: ze waren heel tevreden.</figcaption>
+    <a class="doc" href="media/docs/notulen-feedbackmoment.pdf" target="_blank" rel="noopener"><span>PDF</span>Open de notulen van het feedbackmoment</a>
+  </figure>
+  <div class="prose">
+    <p>We zaten op de goede weg, want de opdrachtgever en Bas waren heel tevreden over wat we lieten zien. Uit het gesprek kwamen ook vier duidelijke punten om het nog beter te maken. Van elk punt maakte ik een SMART-leerdoel: specifiek, meetbaar, acceptabel, realistisch en tijdgebonden.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feedback</th><th>SMART-leerdoel</th></tr></thead>
+      <tbody>
+        <tr><td>Makkelijk wisselen tussen AI's</td><td>Voor de volgende sprint review heb ik drie AI's (FashionCLIP, Claude en OpenAI) gekoppeld achter één instelling, <code>VISION_BACKEND</code>. Zo kan ik binnen één minuut wisselen, en dat laat ik live zien in de demo.</td></tr>
+        <tr><td>Iets over kleding laten zien</td><td>Voor de volgende sprint review herkent de spiegel bij elke foto minstens één kledingstuk en de kleur ervan, en gaat elke opmerking daarover. Ik test dit met minstens vijf verschillende outfits.</td></tr>
+        <tr><td>Leuk als jullie een eigen API-key kopen (niet verplicht)</td><td>Binnen deze sprint koop ik zelf API-tegoed, koppel ik een vision-model met mijn eigen key en bewaar ik die veilig in <code>.env</code>. Ik controleer dat de key niet op GitHub terechtkomt.</td></tr>
+        <tr><td>Iets doen met de telefoon</td><td>Voor de volgende sprint review kan een bezoeker met een QR-code de pagina <code>/mobiel</code> op zijn telefoon openen en daar zijn Instagram invullen. Ik test dit op minstens twee verschillende telefoons.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 5. FEEDBACK VERWERKT ============ -->
+<section class="section" id="versie-2">
+  <h2>5. Feedback verwerkt</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Stap voor stap verbeteren</span><span>Programmeren met AI-modellen</span><span>Managen en samenwerken</span></p>
+  <div class="prose">
+    <p>Met de feedback ging ik verder bouwen aan versie 1. Het belangrijkste punt was dat we niet vast moesten zitten aan één AI.</p>
+    <p>De AI is het deel van de app dat naar je foto kijkt en vertelt wat je aanhebt. Er zijn verschillende AI's die dat kunnen. Ik heb er drie gekoppeld, die we <strong>backends</strong> noemen: de AI's die achter de schermen het werk doen.</p>
+    <ul>
+      <li><strong>FashionCLIP</strong> draait gratis op de laptop zelf, zonder internet.</li>
+      <li><strong>Claude</strong> en <strong>OpenAI</strong> draaien online bij een bedrijf. De app stuurt de foto via een <strong>API</strong> naar hun AI en krijgt een antwoord terug. Een API kun je zien als een loket waar je app een vraag stelt aan het systeem van een ander bedrijf.</li>
+    </ul>
+    <p>Elke AI praat eigenlijk een beetje een andere taal. Daarom bouwde ik in <code>clothing_detector.py</code> een <strong>abstraction layer</strong>: een tussenlaag die het antwoord van elke AI omzet naar precies dezelfde vorm. Vergelijk het met een reisstekker die in elk stopcontact past: de rest van de app hoeft niet te weten welke AI er werkt. Met één instelling wissel je van AI:</p>
+  </div>
+<pre><code>BACKEND = os.getenv("VISION_BACKEND", "clip")  <span class="c"># "clip", "claude" of "openai"</span></code></pre>
+  <div class="prose">
+    <p>De AI herkent nu kledingstukken en kleuren, en de opmerkingen van de spiegel gaan daarover. FashionCLIP doet dat met <strong>zero-shot classificatie</strong>. Dat betekent dat je het model niet eerst hoeft te trainen met duizenden voorbeeldfoto's. Je geeft gewoon een lijst woorden, zoals &ldquo;hoodie&rdquo;, &ldquo;spijkerbroek&rdquo;, &ldquo;zwart&rdquo; of &ldquo;wit&rdquo;, en het model kiest zelf welke het beste bij de foto passen.</p>
+    <h3>Zelf een API-key gekocht</h3>
+    <p>Om de online AI's te gebruiken heb je een <strong>API-key</strong> nodig. De opdrachtgever zei in het feedbackmoment dat het heel leuk zou zijn als we een API-key kochten. Het was niet verplicht, maar ik heb het toch gedaan om er het volle uit te halen. Ik kocht tegoed bij Anthropic, voor het vision-model Claude. Een vision-model is een AI die naar afbeeldingen kan kijken.</p>
+    <p>De API-key werkt als een sleutel: de spiegel stuurt de foto van je outfit samen met de key naar de AI. De AI kijkt welke kledingstukken en kleuren je draagt en stuurt dat terug. Elke foto kost een klein beetje tegoed. Als het op is, stopt de herkenning met deze AI.</p>
+    <p>De key is geheim, dus hij staat in een <code>.env</code>-bestand. Dat bestand staat in <code>.gitignore</code>, een lijst met bestanden die nooit op GitHub komen. Zo kan niemand anders mijn key zien of misbruiken.</p>
+  </div>
+  <figure>
+    <img class="frame" src="media/api-credits.png" alt="Billing-pagina met het API-tegoed dat ik heb gekocht" loading="lazy" style="max-width:720px">
+    <figcaption>Het tegoed dat ik kocht voor de API-key. Hiermee herkent de spiegel kleding en kleuren.</figcaption>
+  </figure>
+  <div class="prose">
+    <p>Daarnaast kwam er een telefoonversie via <code>/mobiel</code>. Als je de QR-code op de spiegel scant, opent die pagina op je telefoon en typ je daar je Instagram in. Zo gebruik je de spiegel en je eigen telefoon samen, en dat houdt je aandacht vast.</p>
+    <p>Tijdens het bouwen bleef ik ook het team in de gaten houden.</p>
+  </div>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/teams-prototypes.png" alt="Teams-bericht om een bijeenkomst te plannen waarin we de prototypes laten zien" loading="lazy">
+      <figcaption>Eerst plande ik een meeting met de opdrachtgever om onze prototypes te laten zien.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/wa-prototypes.png" alt="WhatsApp-bericht: hoe ver zijn we met de prototypes, heeft iemand hulp nodig?" loading="lazy">
+      <figcaption>Daarna vroeg ik in de groep hoe ver iedereen was met zijn prototype en of iemand hulp nodig had.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/wa-teamgenoot-helpen.png" alt="Privégesprek in WhatsApp waarin ik een teamgenoot help" loading="lazy">
+      <figcaption>Een teamgenoot liep ergens op vast, maar durfde dat niet in de groepsapp te zeggen. Ik had dat door en vroeg privé of ik kon helpen.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 6. ONDERZOEK ============ -->
+<section class="section" id="onderzoek">
+  <h2>6. Onderzoek naar surveillance</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Literatuuronderzoek</span><span>Stakeholderanalyse</span><span>Rekening houden met ethiek</span></p>
+  <div class="prose">
+    <p>Iedereen in het team onderzocht een eigen dark value. Ik koos surveillance, omdat de camera de kern van ons project is. Surveillance betekent dat mensen bekeken of gevolgd worden, vaak zonder dat ze het weten of ervoor gekozen hebben. Mijn vraag was: welke risico's op surveillance ontstaan door Fashion Police, voor gebruikers, de opdrachtgever, omstanders en de maatschappij?</p>
+    <p>Ik deed literatuuronderzoek, een stakeholderanalyse en bekeek ons eigen prototype kritisch. Een belangrijk voorbeeld waren de reclamezuilen op NS-stations met verborgen camera's. Het bedrijf beloofde dat er niets werd opgeslagen, maar volgens de Autoriteit Persoonsgegevens mag het bekijken van mensen in de publieke ruimte meestal al niet. Daaruit haalde ik twee blinde vlekken in ons ontwerp:</p>
+    <ul>
+      <li><strong>&ldquo;We slaan niets op&rdquo; is niet genoeg.</strong> Ook als je niets bewaart, kijkt de camera wel naar mensen. Ook omstanders die toevallig achter je langslopen.</li>
+      <li><strong>Een afmeldgebaar is geen echte keuze.</strong> Het idee was dat je een hand voor je hoofd houdt als je niet mee wilt doen. Maar wie dat gebaar niet kent, kan zich niet afmelden.</li>
+    </ul>
+    <h3>Wat het veranderde aan onze applicatie</h3>
+    <p>Het onderzoek liet zien dat mijn keuze in versie 1, privacy in het ontwerp in plaats van een gebaar, de goede richting was. Voor versie 2 nam ik er deze punten uit mee:</p>
+    <ul>
+      <li>Het gezicht wordt nog beter afgeschermd: je hoofd valt in een zwart vak met &ldquo;Identiteit afgeschermd&rdquo;.</li>
+      <li>Opslaan staat standaard uit. Pas als iemand het bewust aanzet, worden foto's bewaard, en dan alleen geanonimiseerd.</li>
+      <li>De Instagram-naam blijft nooit bewaard en wordt direct gewist nadat hij op het scherm is getoond.</li>
+    </ul>
+  </div>
+<pre><code><span class="c"># Alleen opslaan op schijf als SAVE_TO_DISK aan staat</span>
+overlay_path = None
+if SAVE_TO_DISK:
+    overlay_path = DATA_DIR / f"{record_id}_anonymized.jpg"
+    anonymized_overlay.save(overlay_path, format='JPEG', quality=95)</code></pre>
+  <div class="prose">
+    <p>De belangrijkste les voor mij: privacy gaat niet alleen over wat je bewaart, maar ook over wie je bekijkt.</p>
+    <a class="doc" href="media/docs/onderzoek-surveillance.pdf" target="_blank" rel="noopener"><span>PDF</span>Lees het hele onderzoek</a>
+  </div>
+</section>
+
+<!-- ============ 7. VERSIE 2 ============ -->
+<section class="section" id="versie-2b">
+  <h2>7. Versie 2</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Stap voor stap verbeteren</span><span>Interface ontwerpen</span><span>Rekening houden met ethiek</span></p>
+  <div class="prose">
+    <p>Met de feedback en mijn onderzoek heb ik versie 1 verder verbeterd tot versie 2. De opdrachtgever wilde graag dat hij ook op de telefoon werkt, dus ik heb hem responsive gemaakt. Daarnaast heb ik de privacy en de donkere kant van de spiegel sterker gemaakt.</p>
+    <p>Ik heb versie 2 ook veel speelser gemaakt. In versie 1 keek je vooral naar een scherm met tekst. Nu heb je echt een interactie met de spiegel: je zet je hoofd in het vak, de spiegel telt af, vergelijkt je met anderen, stelt je vragen en daagt je uit om het tegendeel te bewijzen. Daardoor blijven mensen langer staan en houdt de spiegel hun aandacht vast.</p>
+    <h3>Lijnen die alleen jou volgen</h3>
+    <p>Op het scherm zie je lijnen over je lichaam. Die lijnen volgen alleen de persoon die voor de spiegel staat, en niet de mensen die achter je langslopen. Zo zie je precies waarvan en van wie een foto wordt gemaakt. Dat sluit aan op mijn onderzoek: omstanders mogen niet ongemerkt in beeld komen.</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/eindversie.mp4" poster="media/eindversie-scan.jpg" controls muted playsinline preload="none" aria-label="Schermopname van versie 2: gezicht afgeschermd, lichaamslijnen, oordeel, ranking en herkansing"></video>
+    <figcaption>Versie 2 van begin tot eind: gezicht afgeschermd, aftellen, oordeel, ranking, herkansing en de Instagram-twist.</figcaption>
+  </figure>
+  <div class="prose">
+    <h3>Wat ik verbeterde ten opzichte van versie 1</h3>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Onderdeel</th><th>Versie 1</th><th>Versie 2</th></tr></thead>
+      <tbody>
+        <tr><td>Privacy</td><td>Je hoofd moest boven een groene lijn blijven</td><td>Je hoofd valt in een zwart vak met &ldquo;Identiteit afgeschermd&rdquo;. Lichaamslijnen volgen alleen jou, niet de mensen achter je. Zo zie je van wie de foto wordt gemaakt</td></tr>
+        <tr><td>Uitleg</td><td>Korte teksten</td><td>Duidelijke stappen: &ldquo;Zet je hoofd in het zwarte vak&rdquo;, &ldquo;Handen naast je hoofd&rdquo; en een aftelling met &ldquo;Niet bewegen&rdquo;</td></tr>
+        <tr><td>Oordeel</td><td>Alleen tekst</td><td>&ldquo;Jouw outfit lijkt op&hellip;&rdquo; met een plaatje, bijvoorbeeld een streetwear-icoon of een mislukte ninja. De AI noemt ook de kleur van je kleding</td></tr>
+        <tr><td>Vergelijken</td><td>Geen</td><td>Een ranking: &ldquo;Jij scoort beter dan 94% van de bezoekers vandaag&rdquo;</td></tr>
+        <tr><td>Na kritiek</td><td>Eén knop om opnieuw te proberen</td><td>&ldquo;Bewijs het tegendeel&rdquo; met een keuze uit twee herkansingen</td></tr>
+        <tr><td>Persoonlijke vragen</td><td>Alleen Instagram</td><td>Ook &ldquo;Voor wie heb je je zo aangekleed?&rdquo;: voor mezelf, een date, werk of school</td></tr>
+        <tr><td>Scherm</td><td>Vooral laptop</td><td>Responsive: werkt ook op de telefoon</td></tr>
+        <tr><td>Interactie</td><td>Vooral kijken naar tekst</td><td>Speels: aftellen, vergelijken, vragen en uitdagingen houden de aandacht van mensen vast</td></tr>
+        <tr><td>Stijl</td><td>Donker scherm</td><td>Bewakingscamera-look met REC, een subject-nummer en camerahoeken</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <img class="frame" src="media/herkansing.gif" alt="Animatie: de spiegel zegt dat je outfit lijkt op een mislukte ninja, waarna je een herkansing kiest" loading="lazy" style="max-width:560px">
+    <figcaption>&ldquo;Jouw outfit lijkt op&hellip; een mislukte ninja.&rdquo; Daarna kies je zelf je herkansing.</figcaption>
+  </figure>
+  <div class="prose">
+    <h3>Vernederd, en weer op zoek naar erkenning</h3>
+    <p>Na het compliment bij foto 1 slaat de spiegel om. Hij vernedert je en vertelt op een negatieve manier waar je outfit op lijkt, zoals &ldquo;een mislukte ninja&rdquo;, met een opmerking die over jouw kleding en kleur gaat. Daardoor wil je het compliment van de eerste foto terug. Je gaat weer op zoek naar erkenning, net als bij foto 1.</p>
+    <p>Je kunt daarna op een speelse manier je herkansing aangeven: met &ldquo;Bewijs het tegendeel&rdquo; kies je zelf hoe je jezelf wilt bewijzen. Zo blijf je foto's maken.</p>
+    <p>Wat je daarbij helemaal niet doorhebt, is dat je steeds meer over jezelf vertelt. Je geeft aan waar je naartoe gaat, waar je trots op bent en, het ergste, je Instagram. Precies dat is het donkere van de spiegel: hij voelt als een spelletje, maar ondertussen verzamelt hij informatie over jou.</p>
+  </div>
+  <div class="prose">
+    <h3>Ook op de telefoon</h3>
+    <p>De opdrachtgever wilde dat je de spiegel ook op je telefoon kunt openen. Daarom maakte ik de pagina responsive: alles past zich aan het kleine scherm aan.</p>
+  </div>
+  <div class="pair">
+    <figure>
+      <video class="frame" src="media/telefoon.mp4" poster="media/telefoon.jpg" controls playsinline preload="none" style="max-width:340px" aria-label="De spiegel op een telefoon: aftellen en niet bewegen"></video>
+      <figcaption>De spiegel op een telefoon. Je gezicht blijft afgeschermd en de spiegel telt af.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/telefoon-vraag.jpg" alt="De uitslag op een telefoon met de vraag: Voor wie heb je je zo aangekleed?" loading="lazy" style="max-width:340px">
+      <figcaption>De uitslag op de telefoon, met de vraag voor wie je je zo hebt aangekleed. Zo vertelt de bezoeker steeds meer over zichzelf.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 8. GETEST ============ -->
+<section class="section" id="test">
+  <h2>8. Getest met familie en vrienden</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Testen met gebruikers</span><span>Snel testen met gebruikers</span></p>
+  <div class="prose">
+    <p>Ik liet familieleden en vrienden versie 2 testen, zonder uitleg vooraf. Alleen deze vriend vond het niet erg om gefilmd te worden, en zijn reactie is ook heel leuk om te zien. Hij was verbaasd dat de spiegel kon zien welke kleur kleding hij aanhad. Dat laat zien dat de kledingherkenning echt werkt, en dat het voor gebruikers voelt alsof de spiegel meer ziet dan ze verwachten. Precies dat ongemakkelijke gevoel wil Dark Tech oproepen.</p>
+  </div>
+  <figure>
+    <span class="tag after">Tip: zet het geluid aan</span>
+    <video class="frame" src="media/vriend-test.mp4" poster="media/vriend-test.jpg" controls playsinline preload="none" style="max-width:480px" aria-label="Een vriend test versie 2 van Fashion Police, met geluid"></video>
+    <figcaption>Een vriend test versie 2 (tip: zet het geluid aan). Zo hoor je zijn reactie.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 9. SPRINT REVIEW ============ -->
+<section class="section" id="sprint-review">
+  <h2>9. Sprint review</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Demo geven</span><span>Presenteren aan de opdrachtgever</span><span>Feedback vragen en gebruiken</span></p>
+  <div class="prose">
+    <p>Na versie 2 en het testen hadden we de sprint review met de opdrachtgever. Daarin lieten we zien wat werkt, zonder PowerPoint, zoals afgesproken. De opdrachtgever was heel tevreden over het product en had er niet veel op aan te merken. In het feedbackformulier noemde hij &ldquo;de veelzijdigheid van de oplossingen&rdquo; het sterkste punt, en hij schreef: &ldquo;Er zijn 4 werkende prototypes gedemonstreerd, zoals afgesproken. Goed gedaan.&rdquo;</p>
+  </div>
+  <div class="prose">
+    <h3>Volgende stappen</h3>
+    <p>Dit project heeft drie sprints, en sprint 1 is nu voorbij. Voor de volgende sprint gaf de opdrachtgever deze stappen mee:</p>
+    <ul>
+      <li>De applicatie <strong>hosten</strong>, zodat hij online staat en niet alleen op mijn laptop draait.</li>
+      <li><strong>Meer dark patterns</strong> erin verwerken.</li>
+      <li>De vier concepten aanhouden, ze stap voor stap verbeteren en testen, en daarna de meest aansprekende kiezen om te testen op Society 5.0.</li>
+    </ul>
+    <a class="doc" href="media/docs/sprint-review-sprint-1.pdf" target="_blank" rel="noopener"><span>PDF</span>Open het sprint review-formulier</a>
+  </div>
+</section>
+
+<!-- ============ 10. RESULTAAT SPRINT 1 ============ -->
+<section class="section" id="resultaat">
+  <h2>10. Het resultaat van sprint 1</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Demo geven</span><span>Prototypen</span></p>
+  <div class="prose">
+    <p>Aan het einde van sprint 1 staat er een werkende spiegel die op de laptop en op de telefoon werkt. Hij schermt je gezicht af, telt af, maakt een foto, herkent je kleding en de kleur ervan, en vergelijkt je met andere bezoekers. Na kritiek kies je een herkansing, en foto 3 vraagt om je Instagram, met de twist “ik neem mijn woorden terug”. Zo blijf je proberen en vertel je steeds meer over jezelf.</p>
+    <p>De opdrachtgever is heel trots op wat we in deze eerste sprint hebben neergezet.</p>
+    <h3>Nieuwe functies in versie 2</h3>
+    <ul>
+      <li><strong>Kleding en kleur herkennen.</strong> Met de gekochte API-key ziet de spiegel welke kledingstukken je draagt en welke kleur ze hebben, en reageert daarop.</li>
+      <li><strong>&ldquo;Jouw outfit lijkt op&hellip;&rdquo;</strong> met een plaatje dat bij je stijl past.</li>
+      <li><strong>Ranking</strong> ten opzichte van andere bezoekers.</li>
+      <li><strong>Herkansing</strong> na kritiek, met &ldquo;Bewijs het tegendeel&rdquo;.</li>
+      <li><strong>Extra vragen</strong>, zoals &ldquo;Voor wie heb je je zo aangekleed?&rdquo;.</li>
+      <li><strong>Werkt op de telefoon</strong>, omdat de pagina responsive is.</li>
+    </ul>
+  </div>
+  <figure>
+    <video class="frame" src="media/eindversie.mp4" poster="media/eindversie.jpg" controls muted playsinline preload="none" aria-label="Volledige schermopname van versie 2 van Fashion Police"></video>
+    <figcaption>Versie 2 van Fashion Police.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 11. GELEERD ============ -->
+<section class="section" id="geleerd">
+  <h2>11. Wat ik heb geleerd</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Kritisch reflecteren</span><span>Reflecteren</span></p>
+  <div class="prose">
+    <p>Ik heb mijn leerpunten gekoppeld aan de vier competenties van een creative technologist uit de <a href="https://boksa.hbo-ict-hva.nl/profiles/creative-technologist/" target="_blank" rel="noopener">BOKSA</a>.</p>
+    <h3>Persoonlijk leiderschap</h3>
+    <ul>
+      <li><strong>Vroeg feedback vragen scheelt werk.</strong> Door zelf meetings te plannen met de opdrachtgever wist ik steeds of ik nog goed zat, en hoefde ik niet achteraf alles om te gooien.</li>
+      <li><strong>Rustig blijven werkt beter dan reageren.</strong> Toen er in het team iets misging, merkte ik dat een oplossing zoeken met mijn coach meer oplevert dan ingaan op een vervelende reactie.</li>
+    </ul>
+    <h3>Analyseren en adviseren</h3>
+    <ul>
+      <li><strong>Een debrief voorkomt misverstanden.</strong> Door de opdracht op te schrijven en terug te sturen naar de opdrachtgever, wisten we zeker dat we hetzelfde bedoelden.</li>
+      <li><strong>Onderzoek verandert je ontwerp.</strong> Door literatuuronderzoek en een stakeholderanalyse zag ik dat niet alleen de gebruiker, maar ook omstanders in beeld komen. Dat had ik zelf niet bedacht.</li>
+    </ul>
+    <h3>Ontwerpen en realiseren</h3>
+    <ul>
+      <li><strong>Privacy is een ontwerpkeuze.</strong> Het gaat niet alleen om wat je bewaart, maar ook om wie je bekijkt. Daarom hoort privacy in het ontwerp, niet in een gebaar dat de gebruiker moet kennen.</li>
+      <li><strong>Stap voor stap verbeteren en testen met echte mensen laat dingen zien die je zelf mist.</strong> Mijn vriend was verbaasd over iets wat ik zelf normaal vond: dat de spiegel kleuren herkent. Ook merkte ik dat niet iedereen gefilmd wil worden. Dat past precies bij het onderwerp van de spiegel.</li>
+      <li><strong>Programmeren met AI-modellen.</strong> Ik leerde meerdere AI's koppelen achter één tussenlaag, een API-key veilig bewaren, en fouten oplossen door eerst goed te lezen wat de terminal zegt.</li>
+    </ul>
+    <h3>Managen en samenwerken</h3>
+    <ul>
+      <li><strong>Overzicht houden helpt het hele team.</strong> Door notulen te delen, de dark values te verdelen en te vragen wie hulp nodig had, wist iedereen wat er moest gebeuren.</li>
+      <li><strong>Niet iedereen vraagt zelf om hulp.</strong> Een teamgenoot durfde het niet in de groepsapp te zeggen. Door privé te vragen kon ik toch helpen.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 12. VOLGENDE KEER ============ -->
+<section class="section" id="volgende-keer">
+  <h2>12. Wat ik volgende keer ga doen</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Reflecteren</span><span>Testen met gebruikers</span></p>
+  <div class="prose">
+    <ul>
+      <li><strong>Meer experimenteren buiten mijn eigen kring.</strong> Ik ga vaker mensen opzoeken die ik niet ken, zoals voorbijgangers, en de spiegel met hen testen.</li>
+      <li><strong>Meerdere enquêtes maken.</strong> Zo verzamel ik de reacties van testers op een vaste manier en kan ik ze vergelijken.</li>
+      <li><strong>Meer dark patterns gebruiken.</strong> Zo wordt het donkere idee achter de spiegel nog sterker voor bezoekers.</li>
+      <li><strong>De applicatie hosten.</strong> Dan staat hij online en kan iedereen hem openen.</li>
+      <li><strong>Kleding nog meer centraal zetten</strong>, zoals de opdrachtgever in de sprint review vroeg.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SPRINT 2 ============ -->
+<div class="sprint-head sprint-empty" id="sprint-2">
+  <p class="sprint-label">Sprint 2</p>
+  <p class="muted">Hier komt de DevLog van sprint 2.</p>
+</div>
+
+<!-- ============ SPRINT 3 ============ -->
+<div class="sprint-head sprint-empty" id="sprint-3">
+  <p class="sprint-label">Sprint 3</p>
+  <p class="muted">Hier komt de DevLog van sprint 3.</p>
+</div>
+
+</main>
+
+<footer>Ali Addi, Hogeschool van Amsterdam</footer>
+
+</body>
+</html>
