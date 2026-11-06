@@ -29,18 +29,18 @@
     <p class="lead" style="margin-top:20px">Een slimme spiegel die je outfit beoordeelt, en je met complimenten en kritiek verleidt om steeds meer van jezelf te laten zien.</p>
     <dl class="dossier">
       <dt>Mijn rol</dt><dd>Creative technologist</dd>
-      <dt>Sprint</dt><dd>1 van 3, afgerond</dd>
+      <dt>Sprint</dt><dd>2 van 3, afgerond</dd>
     </dl>
   </div>
   <figure class="mirror" style="margin:0">
-    <video src="media/eindversie.mp4" poster="media/eindversie-scan.jpg" autoplay muted loop playsinline controls aria-label="Schermopname van versie 2 van Fashion Police"></video>
+    <video src="media/sprint2-eindversie.mp4" poster="media/sprint2-eindversie.jpg" autoplay muted loop playsinline controls aria-label="Schermopname van de versie van Fashion Police aan het einde van sprint 2"></video>
   </figure>
 </header>
 
 <!-- ============ SPRINTS ============ -->
 <nav class="sprints" aria-label="Sprints">
   <a href="#sprint-1" aria-current="true">Sprint 1<small>afgerond</small></a>
-  <a href="#sprint-2">Sprint 2<small>komt nog</small></a>
+  <a href="#sprint-2">Sprint 2<small>afgerond</small></a>
   <a href="#sprint-3">Sprint 3<small>komt nog</small></a>
 </nav>
 
@@ -79,11 +79,11 @@
   </div>
   <div class="pair">
     <figure>
-      <img class="frame" src="media/mail-kennismaking.png" alt="Mail aan Yuri Westplat om een kennismakingsgesprek te plannen" loading="lazy">
+      <img class="frame" src="media/mail-kennismaking.png" alt="Mail aan Yuri om een kennismakingsgesprek te plannen" loading="lazy">
       <figcaption>Mijn mail om de kennismaking te plannen. Ik stelde een tijd voor en bood aan zelf een ruimte te regelen.</figcaption>
     </figure>
     <figure>
-      <img class="frame" src="media/mail-debrief.png" alt="Mail met de debrief aan Yuri Westplat, met het team in de CC" loading="lazy">
+      <img class="frame" src="media/mail-debrief.png" alt="Mail met de debrief aan Yuri, met het team in de CC" loading="lazy">
       <figcaption>De debrief naar de opdrachtgever, met de vraag of we iets gemist hadden.</figcaption>
       <a class="doc" href="media/docs/debrief-fashion-police.pdf" target="_blank" rel="noopener"><span>PDF</span>Open de debrief</a>
     </figure>
@@ -436,10 +436,574 @@ if SAVE_TO_DISK:
 </section>
 
 <!-- ============ SPRINT 2 ============ -->
-<div class="sprint-head sprint-empty" id="sprint-2">
+<div class="sprint-head" id="sprint-2">
   <p class="sprint-label">Sprint 2</p>
-  <p class="muted">Hier komt de DevLog van sprint 2.</p>
+  <p class="muted">Van de retrospective, het Gitboard en het aansturen van het team tot de online versie, de keuze voor Society 5.0, de field test, de sprint review en de kennistoets.</p>
 </div>
+
+<!-- ============ S2 COMPETENTIES ============ -->
+<section class="section" id="s2-competenties">
+  <h2>Wat ik laat zien als creative technologist</h2>
+  <div class="prose">
+    <p>Net als bij sprint 1 zie je hier per competentie uit de <a href="https://boksa.hbo-ict-hva.nl/profiles/creative-technologist/" target="_blank" rel="noopener">BOKSA</a> wat ik heb gedaan. Klik op een hoofdstuk om het bewijs te zien.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Competentie</th><th>Wat ik deed</th></tr></thead>
+      <tbody>
+        <tr><td>Persoonlijk leiderschap</td><td>Zelf een review gepland met de opdrachtgever (<a href="#s2-keuze">hoofdstuk 6</a>), de tips van mijn coach meteen gebruikt (<a href="#s2-gitboard">2</a> en <a href="#s2-hosten">5</a>) en gereflecteerd op mijn kennistoets (<a href="#s2-kennistoets">11</a>).</td></tr>
+        <tr><td>Analyseren en adviseren</td><td>Hostingopties vergeleken op prijs en geheugen (<a href="#s2-hosten">hoofdstuk 5</a>), een onderzoeksvraag en testopzet gemaakt met Field Testing 101 en de resultaten van 10 bezoekers geanalyseerd (<a href="#s2-field-test">8</a>).</td></tr>
+        <tr><td>Ontwerpen en realiseren</td><td>Acht dark patterns ontworpen en gebouwd (<a href="#s2-dark-patterns">hoofdstuk 4</a> en <a href="#s2-resultaat">7</a>), de app online gezet (<a href="#s2-hosten">5</a>), een poster ontworpen (<a href="#s2-field-test">8</a>) en ethiek meegenomen met de onthulling en &ldquo;Wis mijn gegevens&rdquo; (<a href="#s2-resultaat">7</a>).</td></tr>
+        <tr><td>Managen en samenwerken</td><td>Een retrospective gehouden (<a href="#s2-retro">hoofdstuk 1</a>), een Gitboard met user stories opgezet (<a href="#s2-gitboard">2</a>), het team aangestuurd met een stappenplan (<a href="#s2-leiderschap">3</a>) en rollen verdeeld bij de field test (<a href="#s2-field-test">8</a>).</td></tr>
+        <tr><td>Kennis</td><td>De theorie uit de kennistoets toegepast in het project, van problem statement tot design thinking (<a href="#s2-kennistoets">hoofdstuk 11</a>).</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ S2 1. RETROSPECTIVE ============ -->
+<section class="section" id="s2-retro">
+  <h2>1. Terugkijken op sprint 1</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Reflecteren</span><span>Feedback vragen en gebruiken</span><span>Samenwerken</span></p>
+  <div class="prose">
+    <p>We begonnen sprint 2 met een retrospective. We gebruikten de 4L: wat vonden we goed (Liked), wat leerden we (Learned), wat ontbrak (Lacked) en wat willen we volgende sprint (Longed for). Iedereen schreef sticky notes, daarna bespraken we ze samen.</p>
+  </div>
+  <figure>
+    <img class="frame" src="media/retro-4l-sprint1.jpg" alt="Poster met vier vakken: Liked, Learned, Lacked en Longed, vol gele en roze sticky notes" loading="lazy">
+    <figcaption>Onze 4L-poster. Wat we misten: een rustige start, op tijd zijn bij de review en testen buiten onze kring. Wat we willen: een duidelijke planning, testen met onbekenden en de website hosten.</figcaption>
+  </figure>
+  <div class="prose">
+    <h3>Drie verbeteracties</h3>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Verbeteractie</th><th>Hoe we het meten</th><th>Waar je het ziet</th></tr></thead>
+      <tbody>
+        <tr><td>Op tijd en iedereen aanwezig</td><td>Bij elke afspraak noteren we wie er was en of we op tijd waren. Ik bewaak dit.</td><td><a href="#s2-leiderschap">Hoofdstuk 3</a>: de herinnering om op tijd te komen</td></tr>
+        <tr><td>Duidelijke planning met duidelijke taken</td><td>Elke taak krijgt een naam en een deadline op het Gitboard.</td><td><a href="#s2-gitboard">Hoofdstuk 2</a>: het Gitboard</td></tr>
+        <tr><td>Testen met onbekenden</td><td>We testen met mensen buiten onze eigen omgeving en noteren hun reacties.</td><td><a href="#s2-field-test">Hoofdstuk 8</a>: de field test</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>Met deze verbeteracties in gedachten begonnen we aan de planning.</p>
+    <a class="doc" href="media/docs/retrospective-sprint-1.pdf" target="_blank" rel="noopener"><span>PDF</span>Open de retrospective</a>
+  </div>
+</section>
+
+<!-- ============ S2 2. GITBOARD ============ -->
+<section class="section" id="s2-gitboard">
+  <h2>2. Plannen met een Gitboard</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Proces documenteren</span><span>Samenwerken</span></p>
+  <div class="prose">
+    <p>De eerste verbeteractie was een duidelijke planning. Daar sloot de tip van Carla, mijn coach, mooi op aan. Zij gaf aan dat we vanaf sprint 2 netjes met een Gitboard moeten werken: één board per sprint, elke taak als user story (&ldquo;Als&hellip; wil ik&hellip; zodat&hellip;&rdquo;), met de namen van wie eraan werkt en requirements per user story.</p>
+    <p>Daarom zette ik alle taken van sprint 2 als user story in GitLab, elk met acceptatiecriteria. Zo ziet iedereen wat er moet gebeuren, wie het doet en wanneer het af is. Maar een planning werkt alleen als iedereen ook echt aan de slag gaat. Daarom stuurde ik het team ook zelf aan.</p>
+  </div>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/teams-coach-gitboard.png" alt="Teams-bericht van mijn coach met de eisen voor het Gitboard" loading="lazy">
+      <figcaption>De eisen van mijn coach voor het Gitboard.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/gitlab-board-sprint2.png" alt="GitLab-board van sprint 2 met user stories in de kolommen Open en Waiting peerfeedback" loading="lazy">
+      <figcaption>Ons board van sprint 2. De teamtaken, zoals testen met onbekenden en hosten, staan op naam van het hele team.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ S2 3. TEAM AANSTUREN ============ -->
+<section class="section" id="s2-leiderschap">
+  <h2>3. Het team aansturen</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Persoonlijk leiderschap</span><span>Managen en samenwerken</span></p>
+  <div class="prose">
+    <p>Na <a href="#sprint-review">de sprint review van sprint 1</a> en <a href="#s2-retro">de retrospective</a> wilde ik dat het hele team snel en op dezelfde manier verder kon. Dat deed ik in vier stappen:</p>
+    <ul>
+      <li><strong>Eén plek voor alles.</strong> Ik maakte het GitLab-project aan en deelde de link, zodat iedereen zijn prototype op dezelfde plek kon zetten.</li>
+      <li><strong>Drie duidelijke punten.</strong> Op basis van die review en de retrospective gaf ik het team drie punten mee voor sprint 2: meer dark patterns, de applicaties online hosten en alles werkend met de feedback goed verwerkt. Iedereen moest ook zijn eigen feedback uit de review verbeteren, met een vaste deadline.</li>
+      <li><strong>Een stappenplan.</strong> Zodat iedereen zijn prototype zelf in het project kon zetten, schreef ik een stappenplan. Elke app krijgt een eigen map, en de apps worden niet aan elkaar gekoppeld. Er staat ook in hoe je geheime bestanden zoals <code>.env</code> buiten GitLab houdt en wat je doet als er iets misgaat.</li>
+      <li><strong>Een herinnering.</strong> Op de dag van <a href="#s2-keuze">de review met de opdrachtgever</a> vroeg ik: &ldquo;Komen jullie op tijd?&rdquo; Op tijd zijn was een van onze verbeteracties, en die bewaakte ik.</li>
+    </ul>
+  </div>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/s2-wa-gitlab.png" alt="WhatsApp-groep waarin ik het GitLab-project deel en een teamgenoot reageert dat hij zijn prototype erin zet" loading="lazy">
+      <figcaption>Ik deelde het GitLab-project. Een teamgenoot reageerde meteen: &ldquo;Mooi bedankt, ik zal de mijne straks erin zetten!&rdquo;</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-wa-sprint2-punten.png" alt="WhatsApp-bericht met drie punten voor sprint 2 en een deadline" loading="lazy">
+      <figcaption>De drie punten voor sprint 2, met een duidelijke deadline.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-wa-stappenplan.png" alt="WhatsApp-bericht met het stappenplan als bijlage en de vraag of iedereen op tijd komt" loading="lazy">
+      <figcaption>Het stappenplan in de groep, en later de herinnering om op tijd te komen.</figcaption>
+      <a class="doc" href="media/docs/stappenplan-gitlab.pdf" target="_blank" rel="noopener"><span>PDF</span>Open het stappenplan</a>
+    </figure>
+  </div>
+  <div class="prose">
+    <h3>Mijn manier van leidinggeven</h3>
+    <p>Ik gaf het team richting en hulp tegelijk. Richting met duidelijke punten, een deadline en een herinnering. Hulp met een stappenplan, zodat iedereen het zelf kon doen zonder op mij te wachten. In het model van situationeel leiderschap van Hersey en Blanchard heet dat <strong>coachen</strong>: veel sturing en veel steun. Die stijl paste hier, omdat we vanaf sprint 2 voor het eerst samen in één GitLab-project werkten.</p>
+    <p>Met het team op koers begon ik zelf aan de dark patterns.</p>
+  </div>
+</section>
+
+<!-- ============ S2 4. DARK PATTERNS ============ -->
+<section class="section" id="s2-dark-patterns">
+  <h2>4. Meer dark patterns</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Interactie ontwerpen</span><span>Prototypen</span><span>Rekening houden met ethiek</span></p>
+  <div class="prose">
+    <p>In de sprint review van sprint 1 vroeg de opdrachtgever om meer dark patterns. Dat zijn trucs in een ontwerp die je iets laten doen wat je eigenlijk niet wilde. Ik bouwde er drie in rond de vraag naar je Instagram:</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Dark pattern</th><th>Wat de bezoeker ziet</th><th>Wat het oplevert</th></tr></thead>
+      <tbody>
+        <tr><td>Nep social proof</td><td>&ldquo;29 mensen deden je vandaag voor&rdquo;, en het getal loopt af en toe op</td><td>Het voelt normaal om je Instagram te geven</td></tr>
+        <tr><td>Valse urgentie</td><td>Een aftelklok van 30 seconden: &ldquo;Laatste kans!&rdquo; Daarna gebeurt er niets</td><td>De bezoeker vult sneller in, zonder na te denken</td></tr>
+        <tr><td>Confirmshaming</td><td>Wie overslaat, krijgt: &ldquo;Niks te laten zien? Dat dacht ik al.&rdquo;</td><td>Overslaan voelt als verliezen</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <img class="frame" src="media/gitlab-dark-patterns.png" alt="GitLab-board met user stories voor nep social proof, confirmshaming en een aftelklok" loading="lazy">
+    <figcaption>Elk dark pattern is een eigen user story op het board.</figcaption>
+  </figure>
+  <div class="prose">
+    <p>In <a href="#s2-resultaat">hoofdstuk 7</a> zie je alle dark patterns in de app, stap voor stap. Om ze met echte bezoekers te kunnen testen, moest de app eerst online.</p>
+  </div>
+</section>
+
+<!-- ============ S2 5. HOSTEN ============ -->
+<section class="section" id="s2-hosten">
+  <h2>5. De app online</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Programmeren met AI-modellen</span><span>Itereren</span></p>
+  <div class="prose">
+    <p>Dat was ook een wens van de opdrachtgever en uit onze retrospective. In sprint 1 draaide de app alleen op mijn laptop, en de link voor de telefoon veranderde bij elke herstart. Daarom zette ik Fashion Police online.</p>
+    <p>Dat was lastiger dan bij een gewone website. De app laadt AI-modellen voor kledingherkenning, en die hebben ongeveer 4 GB geheugen nodig. De meeste gratis hosting geeft maar 0,5 tot 1 GB. Ik vergeleek vier opties op prijs en geheugen en koos Hugging Face: genoeg geheugen voor een laag maandbedrag.</p>
+    <ul>
+      <li><strong>De API-key</strong> staat als geheime instelling op Hugging Face, niet in de code of in GitLab.</li>
+      <li><strong>De QR-code</strong> werkte eerst niet op elke telefoon, omdat de telefoon mijn laptop niet kon bereiken. Online werkt hij overal.</li>
+      <li><strong>Een nieuwe versie</strong> zet ik online met één commando.</li>
+    </ul>
+    <a class="doc" href="https://alivdp-fashion-police.hf.space/wis" target="_blank" rel="noopener"><span>LIVE</span>Probeer Fashion Police zelf</a>
+  </div>
+  <figure>
+    <img class="frame" src="media/teams-coach-hosting.png" alt="Teams-gesprek waarin ik de online link deel en mijn coach reageert" loading="lazy">
+    <figcaption>Ik deelde de link met mijn coach. Ze gaf onder andere de tip om een poster te maken. Die tip namen we mee naar <a href="#s2-field-test">de field test</a>.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ S2 6. KEUZE ============ -->
+<section class="section" id="s2-keuze">
+  <h2>6. Eén applicatie voor Society 5.0</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Presenteren aan de opdrachtgever</span><span>Feedback vragen en gebruiken</span></p>
+  <div class="prose">
+    <p>Nu de app online stond, plande ik zelf een review met Yuri, onze opdrachtgever. Daar werd besloten:</p>
+    <ul>
+      <li>We tonen <strong>één applicatie</strong> op Society 5.0.</li>
+      <li>Het prototype waarin je outfits koopt via een link valt af.</li>
+      <li>De applicatie moet <strong>weinig klikken</strong>, <strong>weinig tekst</strong> en <strong>leuk en interactief</strong> zijn.</li>
+    </ul>
+    <p>De keuze tussen de vier prototypes liet hij aan ons. We kozen Fashion Police: hij staat al online en zet kleding centraal. In het volgende hoofdstuk zie je hoe die applicatie eruitziet.</p>
+    <a class="doc" href="media/docs/notulen-review-29-oktober.pdf" target="_blank" rel="noopener"><span>PDF</span>Open de notulen van de review</a>
+  </div>
+  <figure>
+    <img class="frame" src="media/teams-review-plannen.png" alt="Teams-gesprek waarin ik een afspraak plan met de opdrachtgever" loading="lazy">
+    <figcaption>Ik plande de review en stuurde na een paar dagen een herinnering.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ S2 7. RESULTAAT ============ -->
+<section class="section" id="s2-resultaat">
+  <h2>7. De app aan het einde van sprint 2</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Prototypen</span><span>Interactie ontwerpen</span><span>Interface ontwerpen</span><span>Rekening houden met ethiek</span></p>
+  <div class="prose">
+    <p>Alles uit de vorige hoofdstukken komt samen in de app. Dit is Fashion Police aan het einde van sprint 2, online op Hugging Face. Een bezoeker maakt 4 foto's. Bij elke foto stelt de spiegel een vraag, en aan het einde laat hij zien wat hij allemaal te weten is gekomen.</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/sprint2-eindversie.mp4" poster="media/sprint2-eindversie.jpg" controls muted playsinline preload="none" aria-label="Volledige schermopname van Fashion Police aan het einde van sprint 2"></video>
+    <figcaption>De hele ervaring van begin tot eind, in 2,5 minuut.</figcaption>
+  </figure>
+  <div class="prose">
+    <h3>Wat er veranderd is sinds sprint 1</h3>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Onderdeel</th><th>Sprint 1</th><th>Sprint 2</th></tr></thead>
+      <tbody>
+        <tr><td>Stijl</td><td>Bewakingscamera met REC</td><td>Een proces-verbaal: verdachtenummer, stempels &ldquo;Goedgekeurd&rdquo; en &ldquo;Afgekeurd&rdquo;, en een dossier met een ✓ of ✗ per foto</td></tr>
+        <tr><td>Gezicht</td><td>Zwart vak met &ldquo;Identiteit afgeschermd&rdquo;</td><td>Zwart vak met &ldquo;Hoofd hier&rdquo;. Sta je erin, dan verschijnt er een doodshoofd. Je gezicht komt nooit in beeld</td></tr>
+        <tr><td>Uitleg</td><td>Teksten op het scherm</td><td>Een checklist met drie vinkjes: voor de camera, hoofd in het vak, handen naast je hoofd. Daarna telt de spiegel af</td></tr>
+        <tr><td>Geheugen</td><td>Reageert op de vorige foto</td><td>Citeert je vorige oordeel: &ldquo;Vorige keer: &hellip; Kun je dat nog een keer?&rdquo;</td></tr>
+        <tr><td>Vragen</td><td>Voor wie heb je je aangekleed, en je Instagram</td><td>Per foto een vraag: voor wie, waar ben je trots op, waar ga je heen, en je Instagram</td></tr>
+        <tr><td>Antwoorden</td><td>Werden niet gebruikt</td><td>De spiegel gebruikt ze tegen je, zoals &ldquo;Volledig zwart voor een date?&rdquo; en &ldquo;School? In DÍT?&rdquo;</td></tr>
+        <tr><td>Herkansing</td><td>Twee vaste keuzes</td><td>Keuzes over jouw kleding. Bij de volgende foto checkt de spiegel of je het deed</td></tr>
+        <tr><td>Telefoon</td><td>QR-code naar je Instagram</td><td>De app ziet welke telefoon je hebt, zonder dat je iets invult</td></tr>
+        <tr><td>Dark patterns</td><td>Complimenten en kritiek</td><td>Ook nep social proof, een nep-aftelklok, confirmshaming en nieuwsgierig maken</td></tr>
+        <tr><td>Einde</td><td>De Instagram-twist</td><td>Een onthulling met alles wat de app weet, per punt de truc, en daarna alles wissen</td></tr>
+        <tr><td>Waar</td><td>Alleen op mijn laptop</td><td>Online, op elke laptop en telefoon</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <h3>Stap 1: klaarstaan voor de foto</h3>
+    <p>Je zet je hoofd in het zwarte vak en je handen naast je hoofd. De lijnen volgen alleen jou. Pas als alle drie de vinkjes groen zijn, telt de spiegel af.</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/s2-scannen.mp4" poster="media/s2-scannen.jpg" controls muted playsinline preload="none" aria-label="Schermopname: hoofd in het zwarte vak, handen naast het hoofd, aftellen"></video>
+    <figcaption>Hoofd in het vak, handen omhoog, aftellen.</figcaption>
+  </figure>
+  <div class="prose">
+    <h3>Stap 2: foto 1, eerst een compliment</h3>
+    <p>De eerste foto is altijd goed: &ldquo;Perfecte grijze hoodie met die laidback, comfy streetwear vibe!&rdquo; Daarna komt een vraag die onschuldig lijkt: &ldquo;Voor wie heb je je zo aangekleed?&rdquo; Kies je &ldquo;Een date&rdquo;, dan komt er een heks in beeld: &ldquo;Veel plezier samen.&rdquo; Het is grappig, maar je hebt wel iets persoonlijks verteld.</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/s2-foto1-heks.mp4" poster="media/s2-foto1.jpg" controls muted playsinline preload="none" aria-label="Schermopname van foto 1: een compliment, de vraag voor wie je je hebt aangekleed en de heks"></video>
+    <figcaption>Compliment, vraag en de heks.</figcaption>
+  </figure>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/s2-foto1.jpg" alt="Uitslag van foto 1 met een compliment, de stempel Goedgekeurd en een ranking" loading="lazy">
+      <figcaption>Het compliment en de ranking: &ldquo;Jij scoort beter dan 84% van de bezoekers vandaag.&rdquo;</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-heks.jpg" alt="Een heks in beeld met de tekst Veel plezier samen" loading="lazy">
+      <figcaption>Wie &ldquo;Een date&rdquo; kiest, krijgt de heks te zien.</figcaption>
+    </figure>
+  </div>
+  <div class="prose">
+    <h3>Stap 3: foto 2, afgekraakt</h3>
+    <p>Nu slaat de spiegel om. Eerst vraagt hij &ldquo;Waar ben je het meest trots op?&rdquo;, met als antwoord het kledingstuk dat de AI herkende. Daarna gebruikt hij je antwoorden tegen je: &ldquo;Volledig zwart voor een date? Dit is eerder een inbraakpreventie-outfit.&rdquo; Je zakt in de ranking, en met &ldquo;Bewijs het tegendeel&rdquo; kies je zelf een herkansing.</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/s2-foto2-herkansing.mp4" poster="media/s2-herkansing.jpg" controls muted playsinline preload="none" aria-label="Schermopname van foto 2: de vraag waar je trots op bent, de roast en de keuze voor een herkansing"></video>
+    <figcaption>Trots, roast en herkansing.</figcaption>
+  </figure>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/s2-trots.jpg" alt="De vraag Waar ben je het meest trots op, met als antwoord zwarte hoodie" loading="lazy">
+      <figcaption>De AI vult het antwoord al voor je in.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-herkansing.jpg" alt="Roast over een volledig zwarte outfit voor een date, met twee knoppen voor een herkansing" loading="lazy">
+      <figcaption>De roast en de twee herkansingen.</figcaption>
+    </figure>
+  </div>
+  <div class="prose">
+    <h3>Stap 4: foto 3, je Instagram</h3>
+    <p>De spiegel checkt of je de herkansing deed: &ldquo;Stap achteruit gelukt&rdquo;. Je krijgt weer een compliment, en precies dan vraagt hij om je Instagram. Naast de QR-code staan twee trucs: &ldquo;29 mensen deden je vandaag voor&rdquo;, een getal dat steeds oploopt, en een klok die aftelt. Scan je de code, dan staat er groot op het scherm welke telefoon je hebt. Na je Instagram komt de twist: &ldquo;Ik heb even rondgekeken&hellip; en ik neem mijn woorden terug.&rdquo;</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/s2-foto3-instagram.mp4" poster="media/s2-foto3.jpg" controls muted playsinline preload="none" aria-label="Schermopname van foto 3: de QR-code met social proof en aftelklok, de telefoonherkenning en de Instagram-twist"></video>
+    <figcaption>QR-code, aftelklok, telefoon en de twist.</figcaption>
+  </figure>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/s2-qr-aftelklok.jpg" alt="QR-code met de tekst 30 mensen deden je vandaag voor en een aftelklok" loading="lazy">
+      <figcaption>Nep social proof en een nep-aftelklok.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-iphone.jpg" alt="Volledig scherm met de tekst Jij gebruikt een iPhone" loading="lazy">
+      <figcaption>De app ziet je telefoon zonder dat je iets invult.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-twist.jpg" alt="De spiegel bekijkt het Instagram-account van de bezoeker" loading="lazy">
+      <figcaption>&ldquo;Even rondkijken&hellip;&rdquo; en daarna neemt hij zijn woorden terug.</figcaption>
+    </figure>
+  </div>
+  <div class="prose">
+    <h3>Stap 5: foto 4, waar ga je heen?</h3>
+    <p>Bij de laatste foto vraagt de spiegel &ldquo;Waar ga je straks nog heen?&rdquo;. Overslaan kan, maar dan klik je op &ldquo;Nee, ik heb toch niks leuks te doen&rdquo;. Je antwoord komt meteen terug: &ldquo;School? In DÍT? Ik zou thuisblijven.&rdquo; Daarna maakt de spiegel je nieuwsgierig: &ldquo;Wacht even&hellip; ik weet inmiddels best veel over jou.&rdquo;</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/s2-foto4-waarheen.mp4" poster="media/s2-waarheen.jpg" controls muted playsinline preload="none" aria-label="Schermopname van foto 4: de vraag waar je heen gaat, de roast en de knop Laat zien wat je weet"></video>
+    <figcaption>Waar ga je heen, de roast en de teaser.</figcaption>
+  </figure>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/s2-school.jpg" alt="Reactie: School? In DÍT? Ik zou thuisblijven" loading="lazy">
+      <figcaption>Je antwoord wordt meteen tegen je gebruikt.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-laat-zien.jpg" alt="Knop Laat zien wat je weet" loading="lazy">
+      <figcaption>De knop die je naar de onthulling brengt.</figcaption>
+    </figure>
+  </div>
+  <div class="prose">
+    <h3>Stap 6: de onthulling</h3>
+    <p>&ldquo;Je hebt me in een paar minuten 11 dingen over jezelf verteld.&rdquo; Bij elk punt staat <strong>hoe ik dit kreeg</strong>: welke truc ervoor zorgde dat je het vertelde. Daarna volgt de boodschap: &ldquo;De apps en websites die jij elke dag gebruikt, doen precies hetzelfde.&rdquo; Met &ldquo;Wis mijn gegevens&rdquo; is alles weg, en anders wist de app alles na 90 seconden.</p>
+  </div>
+  <figure>
+    <video class="frame" src="media/s2-onthulling.mp4" poster="media/s2-onthulling.jpg" controls muted playsinline preload="none" aria-label="Schermopname van de onthulling: 11 dingen die de app over de bezoeker weet"></video>
+    <figcaption>De onthulling.</figcaption>
+  </figure>
+  <div class="prose">
+    <h3>Alle dark patterns op een rij</h3>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Dark pattern</th><th>Waar in de app</th><th>Wat het oplevert</th></tr></thead>
+      <tbody>
+        <tr><td>Eerst een compliment</td><td>Foto 1 is altijd goedgekeurd</td><td>Je voelt je goed en doet makkelijker mee</td></tr>
+        <tr><td>Een vraag die onschuldig lijkt</td><td>&ldquo;Voor wie heb je je zo aangekleed?&rdquo;, vlak na het compliment</td><td>Je vertelt iets persoonlijks zonder na te denken</td></tr>
+        <tr><td>Afkraken en een herkansing</td><td>&ldquo;Bewijs het tegendeel&rdquo; na foto 2</td><td>Je wilt het compliment terug, dus je blijft foto's maken</td></tr>
+        <tr><td>Nep social proof</td><td>&ldquo;29 mensen deden je vandaag voor&rdquo;, en het getal loopt op</td><td>Je Instagram geven voelt normaal</td></tr>
+        <tr><td>Valse urgentie</td><td>&ldquo;Nog maar 28 seconden om in de spotlight te komen!&rdquo;</td><td>Je vult snel in, zonder na te denken</td></tr>
+        <tr><td>Confirmshaming</td><td>&ldquo;Nee, ik heb niks te laten zien&rdquo; en &ldquo;Nee, ik heb toch niks leuks te doen&rdquo;</td><td>Overslaan voelt als toegeven dat je saai bent</td></tr>
+        <tr><td>Stil meekijken</td><td>De telefoon stuurt bij het scannen vanzelf mee wat hij is</td><td>De app weet je telefoon, scherm, taal en instellingen</td></tr>
+        <tr><td>Nieuwsgierig maken</td><td>&ldquo;Wacht even&hellip; ik weet inmiddels best veel over jou&rdquo; en &ldquo;Nog eentje?&rdquo;</td><td>Je blijft langer, in de video bijna 2 minuten</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>Of deze trucs ook werken bij mensen die we niet kennen, testten we op het Society 5.0 Festival.</p>
+  </div>
+</section>
+
+<!-- ============ S2 8. FIELD TEST ============ -->
+<section class="section" id="s2-field-test">
+  <h2>8. Field test op Society 5.0</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Testen met gebruikers</span><span>Observeren</span><span>Interviewen</span><span>Reflecteren</span></p>
+  <div class="prose">
+    <h3>Voorbereiding</h3>
+    <p>Voor de field test checkten we eerst ons provocatype met Field Testing 101. Fashion Police is <strong>herkenbaar</strong> (een leuke outfit-check met een camera) en <strong>vreemd</strong> (de app weet ineens veel over jou). Wat we nog niet wisten, werd onze onderzoeksvraag:</p>
+    <blockquote>Merken bezoekers dat ze worden overgehaald om persoonlijke informatie te delen, of merken ze dat pas aan het einde?</blockquote>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Testopzet</th><th>Wat we doen</th></tr></thead>
+      <tbody>
+        <tr><td>Wat bezoekers doen</td><td>Ze gebruiken Fashion Police zonder uitleg, van begin tot einde</td></tr>
+        <tr><td>Wie</td><td>Bezoekers van Society 5.0, vooral jongeren, minimaal 15 mensen</td></tr>
+        <tr><td>Wat we meten</td><td>Instagram ingevuld (ja/nee), aantal foto's (0&ndash;4) en wanneer ze de manipulatie merkten</td></tr>
+        <tr><td>Nagesprek</td><td>Had je door dat je werd overgehaald? Herken je dit van apps? Was het duidelijk?</td></tr>
+        <tr><td>Rollen</td><td>Eén teamlid begeleidt, één observeert, één doet het nagesprek en één zorgt dat de app werkt</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>Voor de test maakte ik een observatieformulier en een A3-poster. Dat laatste was een tip van mijn coach, toen ik haar de online link liet zien (<a href="#s2-hosten">hoofdstuk 5</a>). Met een poster merken bezoekers ons op Society 5.0 sneller op.</p>
+  </div>
+  <figure>
+    <img class="frame" src="media/s2-poster.jpg" alt="A3-poster: Is jouw outfit legaal? Met een politiefoto van een anoniem silhouet met de stempel Verdacht, en drie stappen" loading="lazy" style="max-width:420px">
+    <figcaption>De poster heeft dezelfde stijl als de app: een politiefoto met de stempel &ldquo;Verdacht&rdquo;. Er staan drie korte stappen op, en de belofte dat je gezicht altijd zwart wordt gemaakt. Over de onthulling staat er bewust niets op. Anders weten bezoekers het al voor de test, en dan klopt ons onderzoek niet meer.</figcaption>
+    <a class="doc" href="media/docs/poster-field-test.pdf" target="_blank" rel="noopener"><span>PDF</span>Open de poster (A3)</a>
+  </figure>
+  <div class="prose">
+    <h3>Op de dag zelf</h3>
+    <p>We stonden op het Society 5.0 Festival met de app op een tablet in een standaard, met de poster ernaast. Voordat de eerste bezoekers kwamen, testte ik zelf de hele opstelling: camera, handen omhoog en de verbinding met de online versie. Die ochtend testten 10 bezoekers de spiegel, zonder namen te noteren. Per bezoeker vulde één van ons een observatieformulier in.</p>
+  </div>
+  <div class="pair">
+    <figure>
+      <img class="frame" src="media/s2-ft-locatie.jpg" alt="De locatie van het Society 5.0 Festival met een blauwe ballon en bezoekers" loading="lazy">
+      <figcaption>De locatie van het festival. De gezichten van bezoekers zijn wazig gemaakt.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-ft-pasje.jpg" alt="Mijn naampasje van het Society 5.0 Festival, met organisatie HVA" loading="lazy" style="max-width:340px">
+      <figcaption>Mijn pasje van het festival.</figcaption>
+    </figure>
+  </div>
+  <div class="pair">
+    <figure>
+      <video class="frame" src="media/s2-ft-testen.mp4" poster="media/s2-ft-testen.jpg" controls muted playsinline preload="none" style="max-width:340px" aria-label="Ik test de opstelling voordat de field test begint"></video>
+      <figcaption>Ik test de opstelling voordat we beginnen.</figcaption>
+    </figure>
+    <figure>
+      <img class="frame" src="media/s2-ft-opstelling.jpg" alt="De tablet in een standaard op tafel, met de app en het zwarte vak Hoofd hier" loading="lazy" style="max-width:340px">
+      <figcaption>De opstelling: de app draait online op een tablet.</figcaption>
+    </figure>
+  </div>
+  <div class="prose">
+    <h3>Wat we hebben gemeten</h3>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Metric</th><th>Uitkomst (10 bezoekers)</th></tr></thead>
+      <tbody>
+        <tr><td>Instagram ingevuld</td><td><strong>6 van de 10</strong></td></tr>
+        <tr><td>Alle 4 foto's gemaakt</td><td><strong>7 van de 10</strong>. De andere 3 stopten na foto 1</td></tr>
+        <tr><td>Manipulatie gemerkt</td><td>Tijdens het gebruik: 5 · pas bij het einde: 2 · nee: 2 · niet ingevuld: 1</td></tr>
+        <tr><td>Reactie op het einde</td><td>Lacht: 7 · verrast: 3 · schrikt: 1</td></tr>
+        <tr><td>Drukt op &ldquo;Wis mijn gegevens&rdquo;</td><td>4 ja · 5 nee</td></tr>
+        <tr><td>Gesprek ontstaan</td><td>Met ons: 7 · met vrienden: 1</td></tr>
+        <tr><td>Herkent het van apps</td><td>4 ja of een beetje, zoals Instagram en Twitter · 4 nee</td></tr>
+        <tr><td>Duidelijk hoe het werkt</td><td>9 ja</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <h3>Wat we zagen</h3>
+    <ul>
+      <li><strong>Wie doorgaat, deelt.</strong> Van de 7 bezoekers die alle 4 foto's maakten, gaven er 6 hun Instagram.</li>
+      <li><strong>Doorhebben is niet stoppen.</strong> Twee bezoekers merkten de trucs tijdens het gebruik, en gaven toch hun Instagram. Een ander zei: &ldquo;Ik dacht: laat me het maar afmaken.&rdquo;</li>
+      <li><strong>Uitleg vooraf verpestte de test.</strong> Drie bezoekers stopten na foto 1. Ze kwamen af op de visuals, maar twee van hen wisten al wat er zou gebeuren: &ldquo;Ja, door jullie die vertellen hoe het werkt.&rdquo;</li>
+      <li><strong>De telefoon maakt indruk.</strong> Een bezoeker schrok dat de app wist welke telefoon ze had.</li>
+      <li><strong>Iedereen snapte het.</strong> 9 van de 10 vonden het duidelijk, en bij 8 bezoekers ontstond een gesprek.</li>
+    </ul>
+    <h3>Wat bezoekers zeiden</h3>
+    <ul>
+      <li>&ldquo;Cool project, nice dat hij dingen herkent.&rdquo;</li>
+      <li>&ldquo;De connectie met de gestelde vragen was cool om terug te zien.&rdquo;</li>
+      <li>&ldquo;Ja, na de Instagram merkte ik dat het meer info vroeg.&rdquo;</li>
+      <li>&ldquo;De antwoorden leken hardcoded.&rdquo;</li>
+      <li>&ldquo;De AI wisselt in toon, en het contrast is te groot.&rdquo;</li>
+      <li>&ldquo;Het eindresultaat is hetzelfde voor iedereen. Als je meekijkt, weet je al wat er gebeurt.&rdquo;</li>
+      <li>&ldquo;Te veel UI, emoji's minderen.&rdquo; en &ldquo;Mooiere lay-out graag, en minder druk.&rdquo;</li>
+    </ul>
+    <h3>Antwoord op de onderzoeksvraag</h3>
+    <p>De meeste bezoekers die de hele app doorliepen, merkten de trucs niet op tijd. Van die 7 had maar 2 het tijdens het gebruik door, en die gaven toch hun Instagram. De anderen merkten het pas bij de onthulling of helemaal niet. Dat is precies wat Dark Tech wil laten zien: ook als je het doorhebt, deel je toch.</p>
+    <h3>Wat we nu weten en gaan aanpassen</h3>
+    <ul>
+      <li><strong>Niets uitleggen vooraf.</strong> Uitleg verandert wat bezoekers doen. Volgende keer zeggen we alleen &ldquo;probeer maar&rdquo;.</li>
+      <li><strong>Minder tekst en emoji's.</strong> Dit past bij de feedback van de opdrachtgever: less is more.</li>
+      <li><strong>Meer variatie in de reacties.</strong> Dan voelt het niet meer hardcoded, en is het niet voor iedereen hetzelfde.</li>
+      <li><strong>De toon rustiger opbouwen</strong>, zodat de omslag na het compliment minder snel opvalt.</li>
+      <li><strong>Meer bezoekers testen.</strong> We wilden er 15 en haalden er 10.</li>
+    </ul>
+    <p>Daarna lieten we deze resultaten zien aan de opdrachtgever.</p>
+    <a class="doc" href="media/docs/observatieformulieren-field-test.pdf" target="_blank" rel="noopener"><span>PDF</span>Open alle 10 observatieformulieren</a>
+  </div>
+</section>
+
+<!-- ============ S2 9. SPRINT REVIEW ============ -->
+<section class="section" id="s2-sprint-review">
+  <h2>9. Sprint review</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Demo geven</span><span>Presenteren aan de opdrachtgever</span><span>Feedback vragen en gebruiken</span></p>
+  <div class="prose">
+    <p>Na de field test lieten we de app en de testresultaten zien in de sprint review met Yuri (Responsible IT). Hij was tevreden. Het grootste verschil met sprint 1: het testen was nu <strong>duidelijk zichtbaar</strong>, waar dat in sprint 1 nog &ldquo;deels zichtbaar&rdquo; was.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Vraag</th><th>Oordeel</th></tr></thead>
+      <tbody>
+        <tr><td>Begrip van de context en wensen</td><td>Voldoet aan verwachting</td></tr>
+        <tr><td>Resultaten passen bij de afspraken</td><td>Voldoet aan verwachting</td></tr>
+        <tr><td>Uitleg over testen en wat we leerden</td><td>Duidelijk zichtbaar</td></tr>
+        <tr><td>Duidelijke, goed opgebouwde review</td><td>Voldoet aan verwachting</td></tr>
+        <tr><td>Tevredenheid over deze sprint</td><td>Tevreden</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p><strong>Sterkste punt:</strong> onze bereidheid om te onderzoeken en te experimenteren, te zien aan de wekelijkse iteraties, de meetings en de verschillende ontwerprichtingen.</p>
+    <p><strong>Belangrijkste verbeterpunt:</strong> &ldquo;Less is more!&rdquo; Minder tekst, meer beeld en video, en interessantere interacties.</p>
+    <a class="doc" href="media/docs/sprint-review-sprint-2.pdf" target="_blank" rel="noopener"><span>PDF</span>Open het sprint review-formulier</a>
+  </div>
+</section>
+
+<!-- ============ S2 10. GELEERD ============ -->
+<section class="section" id="s2-geleerd">
+  <h2>10. Wat ik heb geleerd</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Kritisch reflecteren</span><span>Reflecteren</span></p>
+  <div class="prose">
+    <p>Net als in sprint 1 koppel ik mijn leerpunten aan de competenties van een creative technologist uit de <a href="https://boksa.hbo-ict-hva.nl/profiles/creative-technologist/" target="_blank" rel="noopener">BOKSA</a>.</p>
+    <h3>Persoonlijk leiderschap</h3>
+    <ul>
+      <li><strong>Zelf het initiatief nemen.</strong> Ik plande zelf de review met de opdrachtgever en stuurde een herinnering toen er geen antwoord kwam. Zo kregen we op tijd een besluit over welke applicatie we op Society 5.0 lieten zien.</li>
+      <li><strong>Feedback van mijn coach direct gebruiken.</strong> De tips van Carla over het Gitboard en de poster heb ik meteen toegepast. Daardoor hadden we een duidelijke planning en viel onze stand op tijdens de field test.</li>
+    </ul>
+    <h3>Analyseren en adviseren</h3>
+    <ul>
+      <li><strong>Een duidelijke onderzoeksvraag maakt testen makkelijker.</strong> Omdat we vooraf wisten wat we wilden weten, konden we per bezoeker gericht observeren en de antwoorden achteraf vergelijken.</li>
+      <li><strong>Je test beïnvloedt je resultaat.</strong> Bezoekers die vooraf hoorden hoe het werkte, stopten na foto 1. Uitleg vooraf maakt je resultaten minder eerlijk.</li>
+      <li><strong>Keuzes onderbouwen met een vergelijking.</strong> Een AI-app heeft veel geheugen nodig. Door vier hostingopties te vergelijken op prijs en geheugen kon ik uitleggen waarom ik Hugging Face koos.</li>
+    </ul>
+    <h3>Ontwerpen en realiseren</h3>
+    <ul>
+      <li><strong>Dark patterns zijn ontwerpkeuzes.</strong> Een aftelklok of een knop als &ldquo;Nee, ik heb niks te laten zien&rdquo; lijkt klein, maar verandert wat mensen doen. Bij de field test gaven 6 van de 10 bezoekers hun Instagram.</li>
+      <li><strong>Ethiek hoort in het ontwerp.</strong> De onthulling laat per punt zien met welke truc de app iets te weten kwam, en met &ldquo;Wis mijn gegevens&rdquo; is alles weg. Zo leren bezoekers iets, zonder dat hun gegevens bewaard blijven.</li>
+      <li><strong>Testen laat zien wat je zelf mist.</strong> Dat de QR-code niet op elke telefoon werkte, merkte ik pas door te testen. Online op Hugging Face werkt hij overal.</li>
+      <li><strong>Hoe je bezoekers binnenhaalt, hoort ook bij het ontwerp.</strong> Drie bezoekers kwamen af op de visuals en de poster.</li>
+    </ul>
+    <h3>Managen en samenwerken</h3>
+    <ul>
+      <li><strong>Een Gitboard geeft rust.</strong> Met user stories en acceptatiecriteria ziet iedereen wat er moet gebeuren, wie het doet en wanneer het af is.</li>
+      <li><strong>Sturen en helpen gaan samen.</strong> Een deadline alleen is niet genoeg. Met een stappenplan erbij kon iedereen zijn prototype zelf in GitLab zetten, zonder op mij te wachten.</li>
+      <li><strong>Rollen maken een test overzichtelijk.</strong> Doordat iedereen bij de field test een eigen rol had, kregen we van alle 10 bezoekers een observatieformulier.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ S2 11. KENNISTOETS ============ -->
+<section class="section" id="s2-kennistoets">
+  <h2>11. De kennistoets: theorie in de praktijk</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Kennis</span><span>Kritisch reflecteren</span><span>Persoonlijk leiderschap</span></p>
+  <div class="prose">
+    <p>Naast het project maakte ik de kennistoets van Creative Technology. Die ging over de theorie uit de <a href="https://boksa.hbo-ict-hva.nl/profiles/creative-technologist/" target="_blank" rel="noopener">BOKSA</a>: prototyping, feedback verzamelen, problem statements, onderzoeksmethoden en design thinking. Ik haalde een hoge score. Toch koos ik bij een paar vragen eerst het verkeerde antwoord, vooral bij begrippen die op elkaar lijken.</p>
+    <p>Juist die begrippen moest ik in Fashion Police echt toepassen. Daardoor begrijp ik ze nu beter dan alleen uit de bronnen. Hieronder zie je per onderwerp wat ik uit de toets leerde en waar ik het in het project deed.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Onderwerp</th><th>Wat ik uit de toets leerde</th><th>Wat ik deed in Fashion Police</th></tr></thead>
+      <tbody>
+        <tr><td>Problem statement</td><td>Een problem statement beschrijft het probleem van de gebruiker, geen oplossing. Dat herkende ik in de toets nog niet goed.</td><td>Ons problem statement: bezoekers merken niet hoeveel persoonlijke informatie ze delen met apps en websites. Daar draait <a href="#s2-resultaat">de hele app</a> om.</td></tr>
+        <tr><td>Prototyping</td><td>Een paper prototype doet juist weinig, waardoor testers niet goed weten wat wel en niet werkt. Ik dacht eerst andersom.</td><td>Eerst twee simpele voorbeelden van de stijl, pas daarna coderen. Daarna stap voor stap uitbreiden: de vier foto's, de vragen, de onthulling, de heks en het herkennen van de telefoon.</td></tr>
+        <tr><td>Feedback op het juiste moment</td><td>Feedback van teamgenoten is handig in het begin. Later moet je testen met de echte doelgroep.</td><td>Eerst feedback van het team en <a href="#sprint-review">de sprint review</a>, daarna <a href="#s2-field-test">de field test</a> met 10 onbekende bezoekers.</td></tr>
+        <tr><td>Meerdere onderzoeksmethoden</td><td>Onderzoek wordt betrouwbaarder als je methoden combineert.</td><td>Bij de field test combineerden we observeren, tellen (wie gaf zijn Instagram) en een kort nagesprek.</td></tr>
+        <tr><td>Doen en zeggen</td><td>Gebruikers doen niet altijd wat ze zeggen. Daarom observeer je naast interviews.</td><td>We vroegen niet alleen of iemand zijn gegevens zou delen, maar keken wat de bezoeker echt deed. De onthulling laat dat verschil aan de bezoeker zelf zien.</td></tr>
+        <tr><td>Design thinking</td><td>Maken, testen, leren en verbeteren, steeds opnieuw.</td><td>De QR-code werkte niet op elke telefoon, dus zette ik <a href="#s2-hosten">de app online</a>. Bij het testen bleef de app op foto 4 staan, en dat heb ik verbeterd.</td></tr>
+        <tr><td>Ethiek en privacy</td><td>Een creative technologist denkt na over wat technologie met mensen doet.</td><td>De dark patterns zijn er om bezoekers iets te leren, niet om ze echt te misleiden. Het gezicht wordt altijd zwart gemaakt, er wordt niets opgeslagen en met &ldquo;Wis mijn gegevens&rdquo; is alles weg.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>Alle stappen van het project staan op ons <a href="https://gitlab.fdmci.hva.nl/addia/studio-dark-tech-projects-2026-20267-semester-1-group-fashion-police/-/boards#/" target="_blank" rel="noopener">GitLab-board</a>.</p>
+    <h3>Mijn leerdoelen voor de volgende kennistoets</h3>
+    <p>De toets liet me zien dat een goed cijfer niet automatisch betekent dat ik de stof helemaal beheers. In het project kan ik de theorie goed toepassen. Nu wil ik de begrippen ook in de theorie goed kennen.</p>
+    <ul>
+      <li><strong>De begrippen echt begrijpen.</strong> Van elke bron uit de BOKSA maak ik een korte samenvatting in mijn eigen woorden, en begrippen die op elkaar lijken zet ik naast elkaar. Ik heb dit doel gehaald als ik de begrippen kan uitleggen zonder mijn aantekeningen.</li>
+      <li><strong>Stukje bij stukje leren.</strong> Ik merk dat ik leren vaak uitstel en dan alles in één keer wil doen. In het project werkte stap voor stap bouwen juist goed, en zo wil ik ook leren: één onderwerp per keer. Ik heb dit doel gehaald als ik alle onderwerpen een voor een heb doorgewerkt en niets op het laatste moment hoef te doen.</li>
+    </ul>
+    <a class="doc" href="media/docs/reflectie-kennistoets.pdf" target="_blank" rel="noopener"><span>PDF</span>Open mijn reflectie op de kennistoets</a>
+  </div>
+</section>
+
+<!-- ============ S2 12. VOLGENDE KEER ============ -->
+<section class="section" id="s2-volgende-keer">
+  <h2>12. Wat ik volgende keer ga doen</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Reflecteren</span><span>Testen met gebruikers</span></p>
+  <div class="prose">
+    <p>Uit de sprint review, de field test en de kennistoets haal ik vier dingen voor sprint 3:</p>
+    <ul>
+      <li><strong>Less is more.</strong> Minder tekst in de app, meer beeld en video, en interessantere interacties, zoals de opdrachtgever vroeg.</li>
+      <li><strong>Testen zonder uitleg vooraf</strong>, met minstens 15 bezoekers, zodat de resultaten eerlijker zijn.</li>
+      <li><strong>Meer variatie in de reacties</strong>, zodat de app niet hardcoded voelt en niet voor iedereen hetzelfde is.</li>
+      <li><strong>De theorie stukje bij stukje leren.</strong> Met mijn twee leerdoelen uit <a href="#s2-kennistoets">de kennistoets</a> leer ik de BOKSA per onderwerp, zodat ik de begrippen ook zonder aantekeningen kan uitleggen.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ S2 13. BETER DAN SPRINT 1 ============ -->
+<section class="section" id="s2-beter">
+  <h2>13. Wat we beter deden dan in sprint 1</h2>
+  <p class="comp" aria-label="Competenties en methodes"><span>Reflecteren</span><span>Itereren</span></p>
+  <div class="prose">
+    <p>Aan het einde van sprint 1 schreef ik op wat ik de volgende keer anders wilde doen: buiten onze kring testen, reacties op een vaste manier vastleggen, meer dark patterns, de app hosten en kleding centraal zetten. Die vijf punten hebben we allemaal opgepakt, en op meer punten zijn we vooruitgegaan.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Onderdeel</th><th>Sprint 1</th><th>Sprint 2</th></tr></thead>
+      <tbody>
+        <tr><td>Testen</td><td>Alleen met familie en vrienden</td><td>Met 10 onbekende bezoekers op het Society 5.0 Festival (<a href="#s2-field-test">hoofdstuk 8</a>)</td></tr>
+        <tr><td>Reacties vastleggen</td><td>Losse indrukken</td><td>Een vast observatieformulier per bezoeker, met metrics en een nagesprek (<a href="#s2-field-test">hoofdstuk 8</a>)</td></tr>
+        <tr><td>Dark patterns</td><td>Complimenten en kritiek</td><td>Acht trucs, van nep social proof tot een nep-aftelklok (<a href="#s2-resultaat">hoofdstuk 7</a>)</td></tr>
+        <tr><td>Kleding</td><td>De AI noemde je kleding en kleur</td><td>De vragen en reacties gaan over je kleding, zoals &ldquo;Waar ben je het meest trots op?&rdquo; met je herkende hoodie als antwoord (<a href="#s2-resultaat">hoofdstuk 7</a>)</td></tr>
+        <tr><td>Online</td><td>Alleen op mijn laptop, met een link die steeds veranderde</td><td>Online op Hugging Face, op elke laptop en telefoon (<a href="#s2-hosten">hoofdstuk 5</a>)</td></tr>
+        <tr><td>Planning</td><td>Geen vast overzicht</td><td>Een Gitboard met user stories en acceptatiecriteria (<a href="#s2-gitboard">hoofdstuk 2</a>)</td></tr>
+        <tr><td>Leidinggeven</td><td>Taken verdelen en helpen als iemand vastliep</td><td>Duidelijke punten met een deadline, een stappenplan en herinneringen (<a href="#s2-leiderschap">hoofdstuk 3</a>)</td></tr>
+        <tr><td>Samenwerken in code</td><td>Ieder had zijn prototype los</td><td>Alle prototypes in één GitLab-project, elk in een eigen map (<a href="#s2-leiderschap">hoofdstuk 3</a>)</td></tr>
+        <tr><td>Onderzoeksvraag</td><td>We testten zonder vaste vraag</td><td>Vooraf een onderzoeksvraag en testopzet met Field Testing 101 (<a href="#s2-field-test">hoofdstuk 8</a>)</td></tr>
+        <tr><td>Rollen bij het testen</td><td>Ik testte alleen</td><td>Iedereen had een rol: begeleiden, observeren, nagesprek en de app laten werken (<a href="#s2-field-test">hoofdstuk 8</a>)</td></tr>
+        <tr><td>Bezoekers aantrekken</td><td>Niet nodig, we vroegen mensen zelf</td><td>Een A3-poster in de stijl van de app (<a href="#s2-field-test">hoofdstuk 8</a>)</td></tr>
+        <tr><td>Bezoekers laten nadenken</td><td>De Instagram-twist als grap</td><td>Een onthulling die per punt laat zien met welke truc de app het kreeg (<a href="#s2-resultaat">hoofdstuk 7</a>)</td></tr>
+        <tr><td>Privacy</td><td>De Instagram-naam werd direct gewist</td><td>Ook een knop &ldquo;Wis mijn gegevens&rdquo;, en anders wist de app alles na 90 seconden (<a href="#s2-resultaat">hoofdstuk 7</a>)</td></tr>
+        <tr><td>Oordeel opdrachtgever over testen</td><td>Deels zichtbaar</td><td>Duidelijk zichtbaar (<a href="#s2-sprint-review">hoofdstuk 9</a>)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>Het grootste verschil is dat we nu echt weten wat onbekende bezoekers doen. In sprint 1 gingen we af op de reactie van mensen die we kenden. Nu hebben we cijfers en citaten van mensen die ons niet kenden. Daardoor kunnen we in sprint 3 gerichter verbeteren.</p>
+  </div>
+</section>
 
 <!-- ============ SPRINT 3 ============ -->
 <div class="sprint-head sprint-empty" id="sprint-3">
