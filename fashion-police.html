@@ -711,6 +711,17 @@ if SAVE_TO_DISK:
     </figure>
   </div>
   <div class="prose">
+    <p>Hoe weet de app welke telefoon je hebt? Elke telefoon stuurt bij het openen van een website vanzelf een regel tekst mee, de <strong>User-Agent</strong>, met het toestel, het systeem en de browser. De pagina op je telefoon vraagt daarnaast stilletjes nog wat meer op:</p>
+  </div>
+<pre><code><span class="c">// Stilletjes extra info over het apparaat meesturen.</span>
+<span class="c">// De bezoeker hoeft hier niets voor te doen of toe te staan.</span>
+const hints = {
+  w: screen.width,
+  h: screen.height,
+  lang: navigator.language,
+  dark: window.matchMedia("(prefers-color-scheme: dark)").matches,
+};</code></pre>
+  <div class="prose">
     <h3>Stap 5: foto 4, waar ga je heen?</h3>
     <p>Bij de laatste foto vraagt de spiegel &ldquo;Waar ga je straks nog heen?&rdquo;. Overslaan kan, maar dan klik je op &ldquo;Nee, ik heb toch niks leuks te doen&rdquo;. Je antwoord komt meteen terug: &ldquo;School? In DÍT? Ik zou thuisblijven.&rdquo; Daarna maakt de spiegel je nieuwsgierig: &ldquo;Wacht even&hellip; ik weet inmiddels best veel over jou.&rdquo;</p>
   </div>
@@ -731,6 +742,14 @@ if SAVE_TO_DISK:
   <div class="prose">
     <h3>Stap 6: de onthulling</h3>
     <p>&ldquo;Je hebt me in een paar minuten 11 dingen over jezelf verteld.&rdquo; Bij elk punt staat <strong>hoe ik dit kreeg</strong>: welke truc ervoor zorgde dat je het vertelde. Daarna volgt de boodschap: &ldquo;De apps en websites die jij elke dag gebruikt, doen precies hetzelfde.&rdquo; Met &ldquo;Wis mijn gegevens&rdquo; is alles weg, en anders wist de app alles na 90 seconden.</p>
+  </div>
+<pre><code>@app.route('/wis', methods=['GET', 'POST'])
+def wis():
+    <span class="c">"""Wis mijn gegevens: alles van deze bezoeker weg."""</span>
+    session.clear()
+    return redirect('/')</code></pre>
+  <div class="prose">
+    <p>Alles wat de app over je weet, staat alleen in jouw sessie en nooit in een bestand. Met <code>session.clear()</code> is het in één keer weg, en de volgende bezoeker ziet niets van jou.</p>
   </div>
   <figure>
     <video class="frame" src="media/s2-onthulling.mp4" poster="media/s2-onthulling.jpg" controls muted playsinline preload="none" aria-label="Schermopname van de onthulling: 11 dingen die de app over de bezoeker weet"></video>
@@ -886,6 +905,22 @@ if SAVE_TO_DISK:
   <div class="prose">
     <p><strong>Sterkste punt:</strong> onze bereidheid om te onderzoeken en te experimenteren, te zien aan de wekelijkse iteraties, de meetings en de verschillende ontwerprichtingen.</p>
     <p><strong>Belangrijkste verbeterpunt:</strong> &ldquo;Less is more!&rdquo; Minder tekst, meer beeld en video, en interessantere interacties.</p>
+    <h3>Wat we gaan doen met de feedback</h3>
+    <p>De feedback van de opdrachtgever sluit aan op wat bezoekers bij <a href="#s2-field-test">de field test</a> zeiden, zoals &ldquo;te veel UI, emoji's minderen&rdquo; en &ldquo;minder druk&rdquo;. Daarom pakken we in sprint 3 deze punten op:</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feedback</th><th>Wat we gaan doen</th></tr></thead>
+      <tbody>
+        <tr><td>Minder tekst</td><td>Per scherm houden we één korte zin over. Uitleg die je niet nodig hebt, halen we weg, en we gebruiken minder emoji's.</td></tr>
+        <tr><td>Meer beeld en video</td><td>Waar nu tekst staat, laten we het zien met beeld, zoals bij de heks. Ook de onthulling aan het einde maken we beeldender, zodat je in één oogopslag ziet wat de app over je weet.</td></tr>
+        <tr><td>Interessantere interacties</td><td>We maken meer variatie in de reacties, zodat de app niet hardcoded voelt en niet voor iedereen hetzelfde is. Zo blijft het ook spannend voor wie meekijkt.</td></tr>
+        <tr><td>Bewijzen dat het werkt</td><td>We testen de nieuwe versie opnieuw, zonder uitleg vooraf en met minstens 15 bezoekers, en vergelijken de resultaten met deze field test.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>In <a href="#s2-volgende-keer">hoofdstuk 12</a> heb ik deze punten uitgewerkt tot SMART-leerdoelen.</p>
     <a class="doc" href="media/docs/sprint-review-sprint-2.pdf" target="_blank" rel="noopener"><span>PDF</span>Open het sprint review-formulier</a>
   </div>
 </section>
@@ -960,15 +995,23 @@ if SAVE_TO_DISK:
 <!-- ============ S2 12. VOLGENDE KEER ============ -->
 <section class="section" id="s2-volgende-keer">
   <h2>12. Wat ik volgende keer ga doen</h2>
-  <p class="comp" aria-label="Competenties en methodes"><span>Reflecteren</span><span>Testen met gebruikers</span></p>
+  <p class="comp" aria-label="Competenties en methodes"><span>Reflecteren</span><span>Testen met gebruikers</span><span>Persoonlijk leiderschap</span></p>
   <div class="prose">
-    <p>Uit de sprint review, de field test en de kennistoets haal ik vier dingen voor sprint 3:</p>
-    <ul>
-      <li><strong>Less is more.</strong> Minder tekst in de app, meer beeld en video, en interessantere interacties, zoals de opdrachtgever vroeg.</li>
-      <li><strong>Testen zonder uitleg vooraf</strong>, met minstens 15 bezoekers, zodat de resultaten eerlijker zijn.</li>
-      <li><strong>Meer variatie in de reacties</strong>, zodat de app niet hardcoded voelt en niet voor iedereen hetzelfde is.</li>
-      <li><strong>De theorie stukje bij stukje leren.</strong> Met mijn twee leerdoelen uit <a href="#s2-kennistoets">de kennistoets</a> leer ik de BOKSA per onderwerp, zodat ik de begrippen ook zonder aantekeningen kan uitleggen.</li>
-    </ul>
+    <p>Uit <a href="#s2-sprint-review">de sprint review</a>, <a href="#s2-field-test">de field test</a> en <a href="#s2-kennistoets">de kennistoets</a> haal ik vier punten voor sprint 3. Net als in <a href="#feedback">sprint 1</a> maakte ik van elk punt een SMART-leerdoel: specifiek, meetbaar, acceptabel, realistisch en tijdgebonden.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Punt</th><th>SMART-leerdoel</th><th>Zo weet ik dat het gelukt is</th></tr></thead>
+      <tbody>
+        <tr><td>Less is more</td><td>Voor de sprint review van sprint 3 staat op elk scherm van de app hooguit één korte zin, en gebruik ik geen emoji's meer als uitleg. Waar nu tekst staat, laat ik het zien met beeld, zoals bij de heks.</td><td>Ik tel de woorden per scherm voor en na. Bij de volgende test vinden minstens 8 van de 10 bezoekers de app rustig en duidelijk.</td></tr>
+        <tr><td>Testen zonder uitleg</td><td>In sprint 3 testen we met minstens 15 onbekende bezoekers. Vooraf spreek ik met het team af dat we alleen &ldquo;probeer maar&rdquo; zeggen en pas na het nagesprek iets uitleggen.</td><td>We hebben 15 ingevulde observatieformulieren, en geen enkele bezoeker zegt dat hij vooraf al wist wat er zou gebeuren.</td></tr>
+        <tr><td>Meer variatie</td><td>Voor de sprint review van sprint 3 heeft de app bij elke foto minstens drie verschillende reacties, die afhangen van je kleding en je antwoorden. Zo krijgt niet iedereen hetzelfde te horen.</td><td>Drie testers na elkaar krijgen elk een andere reeks reacties. Bij de test noemt niemand de reacties nog &ldquo;hardcoded&rdquo;.</td></tr>
+        <tr><td>De theorie beheersen</td><td>Voor de volgende kennistoets werk ik de BOKSA stukje bij stukje door: elke week één onderwerp, met een korte samenvatting in mijn eigen woorden.</td><td>Ik kan elk begrip zonder aantekeningen uitleggen aan een teamgenoot, en ik hoef niets op het laatste moment te leren.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose">
+    <p>Met deze vier doelen wil ik in sprint 3 laten zien dat we de feedback niet alleen opschrijven, maar ook echt meetbaar verbeteren.</p>
   </div>
 </section>
 
